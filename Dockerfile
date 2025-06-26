@@ -42,16 +42,18 @@ RUN bundle install && \
 # Copy application code
 COPY . .
 
-# Start PostgreSQL service
-RUN systemctl start postgresql
-
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
-
+# start postgresql
+# RUN su postgres && \
+#     psql && \
+#     CREATE USER rails WITH LOGIN SUPERUSER PASSWORD "${RAILS_USER_PASSWORD}" && \
+#     CREATET DATABASE
+#     exit
 
 
 # Final stage for app image
