@@ -19,9 +19,6 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y curl libjemalloc2 libvips sqlite3 postgresql && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
-# Start PostgreSQL service
-RUN systemctl start postgresql
-
 # Set production environment
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
@@ -44,6 +41,9 @@ RUN bundle install && \
 
 # Copy application code
 COPY . .
+
+# Start PostgreSQL service
+RUN systemctl start postgresql
 
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
