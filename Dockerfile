@@ -16,7 +16,7 @@ WORKDIR /rails
 
 # Install base packages
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl libjemalloc2 libvips sqlite3 && \
+    apt-get install --no-install-recommends -y curl libjemalloc2 libvips sqlite3 libpq-dev postgresql && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Set production environment
@@ -47,14 +47,6 @@ RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
-
-# start postgresql
-# RUN su postgres && \
-#     psql && \
-#     CREATE USER rails WITH LOGIN SUPERUSER PASSWORD "${RAILS_USER_PASSWORD}" && \
-#     CREATET DATABASE
-#     exit
-
 
 # Final stage for app image
 FROM base
