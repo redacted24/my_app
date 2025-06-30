@@ -12,7 +12,6 @@ default: &default
 development:
   database: 'portfolio'
   adapter: postgresql
-  host: host.docker.internal
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: unicode
   user: rails
@@ -21,6 +20,7 @@ development:
 production:
   database: 'portfolio'
   adapter: postgresql
+  host: host.docker.internal
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: unicode
   user: rails
