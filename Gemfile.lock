@@ -191,7 +191,9 @@ GEM
       rack (>= 1.6.13)
       rackup (>= 1.0.1)
       rake (>= 12.3.3)
-    pg (1.5.9)
+    pg (1.6.0)
+    pg (1.6.0-aarch64-linux)
+    pg (1.6.0-x86_64-linux)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
