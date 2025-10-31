@@ -1,3 +1,6 @@
-<div>
-  
-</div>
+<p>Hello chat</p>
+<% @project.each do | proj | %>
+  <div>
+    <%= proj.name %>
+  </div>
+<% end %>
