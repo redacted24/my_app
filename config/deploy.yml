@@ -33,9 +33,6 @@ registry:
   password:
     - KAMAL_REGISTRY_PASSWORD
 
-volumes:
-  - ./storage:/rails/storage
-
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 env:
   secret:
@@ -71,7 +68,7 @@ aliases:
 # Use a persistent storage volume for sqlite database files and local Active Storage files.
 # Recommended to change this to a mounted volume path that is backed up off server.
 volumes:
-  - "my_app_storage:/rails/storage"
+  - "storage:/rails/storage"
 
 
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
