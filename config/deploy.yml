@@ -34,7 +34,7 @@ registry:
     - KAMAL_REGISTRY_PASSWORD
 
 volumes:
-  - "storage:/rails/storage"
+  - ./storage:/rails/storage
 
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 env:
