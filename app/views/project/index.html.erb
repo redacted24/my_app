@@ -1,6 +1,10 @@
-<p>Hello chat 23</p>
-<% @project.each do | proj | %>
-  <div>
-    <%= proj.name %>
-  </div>
-<% end %>
+<div>
+  Homepage
+</div>
+<div>
+  Projects
+</div>
+<div>
+  Contact
+</div>
+<a href="/project/<%= @firstProject.id %>">Visit first project</a>
