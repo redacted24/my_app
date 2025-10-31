@@ -33,6 +33,9 @@ registry:
   password:
     - KAMAL_REGISTRY_PASSWORD
 
+files:
+  - storage/development.sqlite3:/rails/storage/production.sqlite3
+
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 env:
   secret:
@@ -67,8 +70,6 @@ aliases:
 
 # Use a persistent storage volume for sqlite database files and local Active Storage files.
 # Recommended to change this to a mounted volume path that is backed up off server.
-files:
-  - "storage/development.sqlite3:/rails/storage/production.sqlite3"
 volumes:
   - "storage:/rails/storage"
 
