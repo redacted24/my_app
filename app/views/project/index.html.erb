@@ -7,4 +7,7 @@
 <div>
   Contact
 </div>
-<a href="/project/<%= @firstProject.id %>">Visit first project</a>
+<% for project in @all_projects do %>
+  <a href="/project/<%= project.url_string %>">Visit first project</a>
+<% end %>
+

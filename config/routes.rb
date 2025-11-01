@@ -11,5 +11,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "project#index"
-  resources :project
+  resources :project, param: :url_string
 end
