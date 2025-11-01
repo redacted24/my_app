@@ -3,8 +3,13 @@ class ProjectController < ApplicationController
     @all_projects = Project.all
   end
 
-  # GET /project/{#id} triggers the show method
+  # GET /project/{#url_string} triggers the show method
   def show
-    @project = Project.find_by_name(params[:url_string])
+    @project = Project.find_by_url_string(params[:url_string])
+  end
+
+  # Direct the user to the homepage.
+  def homepage
+
   end
 end

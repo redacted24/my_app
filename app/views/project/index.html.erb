@@ -1,13 +1,10 @@
+<%= render "menu_bar" %>
+
 <div>
-  Homepage
+  Here is a non-exhaustive list of all projects I currently have.
 </div>
-<div>
-  Projects
-</div>
-<div>
-  Contact
-</div>
+
 <% for project in @all_projects do %>
-  <a href="/project/<%= project.url_string %>">Visit first project</a>
+  <a href="/project/<%= project.url_string %>"><%= project.name %></a>
 <% end %>
 
