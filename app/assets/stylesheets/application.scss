@@ -9,3 +9,16 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
+
+// Mixins
+@use "mixins/media";
+
+// Configuration
+@use "config/variables";
+@use "config/reset";
+
+// Components
+@use "components/button";
+
+// Layouts
+@use "layouts/container";
