@@ -1,5 +1,12 @@
 @use "mixins/media" as mixins;
 
+.main-container {
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-s);
+  margin-left: var(--space-l);
+  margin-right: var(--space-l);
+}
+
 .container {
   width: 100%;
   padding-right: var(--space-xs);
