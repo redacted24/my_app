@@ -7,3 +7,21 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+#
+
+# Poker playground
+Project.find_or_create_by!(
+  name: "Poker Playground",
+  url_string: "poker_playground",
+  tags: [ "Python", "Flask", "React" ],
+  github_link: "",
+  devpost_link: "",
+  website_link: "",
+  custom_link: "",
+  comments: "",
+  active: 0,
+  unreleased: 0,
+  description: "",
+  featured: 1,
+  date: "2025"
+)

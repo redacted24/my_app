@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_02_202844) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_02_213605) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,9 +39,25 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_02_202844) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-# Could not dump table "projects" because of following StandardError
-#   Unknown type 'attachment' for column 'overview_image'
-
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.string "url_string"
+    t.json "tags"
+    t.string "github_link"
+    t.string "devpost_link"
+    t.string "website_link"
+    t.string "custom_link"
+    t.string "comments"
+    t.boolean "active"
+    t.boolean "unreleased"
+    t.string "description"
+    t.boolean "featured"
+    t.string "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "overview_image"
+    t.string "extra_images"
+  end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
