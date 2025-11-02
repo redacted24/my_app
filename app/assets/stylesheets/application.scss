@@ -8,9 +8,7 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
-
-// Mixins
-@use "mixins/media" as *;
+@use "mixins/media";
 
 // Configuration
 @use "config/variables";
@@ -21,4 +19,3 @@
 
 // Layouts
 @use "layouts/container";
-
