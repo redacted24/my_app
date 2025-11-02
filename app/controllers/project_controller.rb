@@ -10,6 +10,6 @@ class ProjectController < ApplicationController
 
   # Direct the user to the homepage.
   def homepage
-
+    @projects = Project.all
   end
 end
