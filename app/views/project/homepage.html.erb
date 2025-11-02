@@ -47,7 +47,9 @@
       <p>Name: <%= project.name %></p>
       <p>Description: <%= project.description %></p>
       <p>Github link: <%= project.github_link %></p>
-      <%= image_tag project.overview_image %>
+      <% if project.overview_image? %>
+        <%= image_tag project.overview_image %>
+      <% end %>
     <% end %>
   </div>
   <div id="education">
