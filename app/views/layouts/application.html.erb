@@ -14,10 +14,11 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload", media: "all" %>
     <%= javascript_importmap_tags %>
   </head>
   <body class="main-container">
     <%= yield %>
+    <%= render "footer" %>
   </body>
 </html>

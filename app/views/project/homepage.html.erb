@@ -1,6 +1,5 @@
-<%= render "menu_bar" %>
 <div>
-  This is the homepage, or the feed, of Qiuyu's website.
+  <p>(debug) This is the info page, or main landing page, of Qiuyu's website.</p>
 </div>
 <div>
   <div>
@@ -12,5 +11,55 @@
     <p>McGill University</p>
     <p>Software Engineering U2</p>
     <p>Canada</p>
+  </div>
+  <div>
+    I like building things from the ground up.
+  </div>
+  <div>
+    <a href="#about-me">About me</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+  </div>
+  <div id="about-me">
+    <h2>About me</h2>
+    <div>
+      I'm an undergraduate software engineer studying at McGill University, Canada.
+      Currently, I am interested in low level programming.
+    </div>
+  </div>
+  <div id="experience">
+    <h2>Experience</h2>
+    <%= 
+      render "experience", 
+      dates: "2025",
+      name: "Corporation des Services du Barreau du Québec",
+      location: "Montreal, Canada",
+      description: "This is a description for the job",
+      tags: ["Tag one", "Tag two"]
+    %>
+  </div>
+  <div id="projects">
+    <h2>Projects</h2>
+  </div>
+  <div id="education">
+    <h2>Education</h2>
+    <%= 
+      render "education", 
+      dates: "2024-2028",
+      name: "McGill University",
+      major: "Software Engineering",
+      location: "Montreal, Canada",
+      involvement: ["Kendo club", "GameDev McGill"]
+    %>
+    <%= 
+      render "education", 
+      dates: "2023-2024",
+      name: "Marianopolis College",
+      major: "CEGEP",
+      location: "Montreal, Canada",
+      involvement: ["The Engineering Society"]
+    %>
+    <%= image_tag "poker_playground_game.png" %>
   </div>
 </div>

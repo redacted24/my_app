@@ -10,14 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_01_212339) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_02_181504) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "url_string"
-    t.string "about"
-    t.string "personal_comment"
-    t.string "github_string"
+    t.json "tags"
+    t.json "images"
+    t.string "github_link"
+    t.string "devpost_link"
+    t.string "website_link"
+    t.string "custom_link"
+    t.string "comments"
+    t.boolean "active"
+    t.boolean "unreleased"
+    t.string "description"
   end
 end
