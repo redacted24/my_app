@@ -42,7 +42,7 @@
   <div id="projects">
     <h2>Projects</h2>
     <p>Featured projects</p>
-    <% for project in @projects.where(featured: 1) %>
+    <% for project in @projects.where(featured: 1).order(date: :desc) %>
       <p>Date: <%= project.date %></p>
       <p>Name: <%= project.name %></p>
       <p>Description: <%= project.description %></p>
