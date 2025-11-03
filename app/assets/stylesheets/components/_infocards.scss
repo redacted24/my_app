@@ -1,0 +1,15 @@
+.infocard-title {
+  border-color: var(--secondary-color);
+  border-width: 1px;
+  border-style: solid;
+
+  background-color: var(--secondary-color);
+  padding-left: var(--space-s);
+}
+
+.infocard-content {
+  border-color: var(--border-dark);
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+}

@@ -35,3 +35,17 @@
 .pt-s {
   padding-top: var(--space-s);
 }
+
+.padding-s {
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+}
+
+.padding-xs {
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+}

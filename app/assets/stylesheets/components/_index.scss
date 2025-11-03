@@ -9,9 +9,8 @@
 }
 
 .index-content {
+  min-width: 50%;
   @include mixins.media(tabletAndUp) {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+    max-width: 70%;
   }
 }

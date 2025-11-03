@@ -1,0 +1,12 @@
+<% case icon %>
+<% when "info" %>
+  <% display = '<i class="fa-solid fa-circle-info"></i>' %>
+<% end %>
+<div class="mt-m mb-m">
+  <div class="infocard-title">
+    <%= callout %> <%= display.html_safe %>
+  </div>
+  <div class="infocard-content padding-s">
+    <p><%= content %></p>
+  </div>
+</div>

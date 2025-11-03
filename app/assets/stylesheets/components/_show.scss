@@ -9,7 +9,9 @@
 }
 
 .show-content {
+  min-width: 50%;
   @include mixins.media(tabletAndUp) {
-    width: 50%;
+    min-width: unset;
+    max-width: 70%;
   }
 }
