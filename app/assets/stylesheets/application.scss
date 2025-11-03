@@ -14,14 +14,15 @@
 @use "config/variables";
 @use "config/reset";
 @use "config/overrides";
+@use "config/text_overrides";
 
 // Components
 @use "components/button";
 @use "components/menu_bar";
 @use "components/introtext";
-@use "components/text_changes";
 @use "components/tags";
 @use "components/experience";
+@use "components/socials";
 
 // Layouts
 @use "layouts/container";

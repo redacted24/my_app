@@ -1,0 +1,9 @@
+.socials {
+  margin-top: var(--space-l);
+  margin-bottom: var(--space-l);
+  display: flex;
+  i {
+    padding-right: var(--space-xl);
+    font-size: var(--font-size-xxl);
+  }
+}
