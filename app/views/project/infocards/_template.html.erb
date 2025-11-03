@@ -1,8 +1,8 @@
 <div class="mt-m mb-m">
-  <div class="infocard-title <%= infocard-color %>">
+  <div class="infocard-title <%= infocard_color %>">
     <%= callout %> <%= display.html_safe %>
   </div>
   <div class="infocard-content padding-s">
-    <p><%= infocard-content %></p>
+    <a href="<%= infocard_content %>" target="_blank"><%= infocard_content.split('.',2)[1] %></a>
   </div>
 </div>

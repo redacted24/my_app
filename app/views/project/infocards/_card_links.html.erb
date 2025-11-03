@@ -1,8 +1,7 @@
-<div class="mt-m mb-m">
-  <div class="infocard-title infocard-blue">
-    Links <i class="fa-solid fa-link"></i>
-  </div>
-  <div class="infocard-content padding-s">
-    <p><%= content %></p>
-  </div>
-</div>
+<%= 
+  render "project/infocards/template",
+  infocard_color: "infocard-blue",
+  callout: "Links",
+  display: '<i class="fa-solid fa-link"></i>',
+  infocard_content: content
+%>

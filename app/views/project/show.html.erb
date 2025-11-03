@@ -7,9 +7,7 @@
         <div class="tag"><%= tag %></div>
       <% end %>
     </div>
-    <%= render "infocards/card_links", 
-        content: @project.description
-    %>
+    <%= render 'project/infocards/card_links', content: @project.github_link %>
     <div>
       <%= @project.date %>
     </div>
