@@ -45,7 +45,7 @@ project = Project.new(
     active: 1,
     unreleased: 1,
     description: "Developed a Windows desktop app that decrypts locally stored databases of a popular messaging service and
-monitors user chats for potentially sensitive topics",
+monitors user chats for potentially sensitive topics.",
     featured: 1,
     date: Time.new(2025, 07, 07)
 )
@@ -57,8 +57,7 @@ project = Project.new(
     name: "Duel Vision",
     url_string: "duel_vision",
     tags: [ "React", "Websockets", "Mediapipe" ],
-    github_link: "Developed a Windows desktop app that decrypts locally stored databases of a popular messaging service and
-monitors user chats for potentially sensitive topics.",
+    github_link: "https://github.com/redacted24/duelvision",
     devpost_link: "",
     website_link: "",
     custom_link: "",
