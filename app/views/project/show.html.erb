@@ -7,9 +7,7 @@
         <div class="tag"><%= tag %></div>
       <% end %>
     </div>
-    <%= render "infocards", 
-        callout: "About", 
-        icon: "info",
+    <%= render "infocards/card_links", 
         content: @project.description
     %>
     <div>
