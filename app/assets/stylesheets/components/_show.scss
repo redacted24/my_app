@@ -1,0 +1,15 @@
+@use "mixins/media" as mixins;
+
+.show-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: var(--space-xl);
+}
+
+.show-content {
+  @include mixins.media(tabletAndUp) {
+    width: 50%;
+  }
+}

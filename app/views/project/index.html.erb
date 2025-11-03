@@ -1,7 +1,11 @@
-<a href="/"><i class="fa-solid fa-arrow-left"></i> Qiuyu Huang</a>
-<h2>Projects</h2>
-<% for project in @all_projects %>
-  <div>
-    <a href="/project/<%= project.url_string %>" class="no-color-a"><%= project.name %></a>
+<div class="index-container flex-1">
+  <div class="index-content">
+    <a href="/"><i class="fa-solid fa-arrow-left"></i> Qiuyu Huang</a>
+    <h2>Projects</h2>
+    <% for project in @all_projects %>
+      <div>
+        <a href="/project/<%= project.url_string %>" class="no-color-a"><%= project.name %></a>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

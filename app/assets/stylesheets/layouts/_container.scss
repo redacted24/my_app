@@ -19,6 +19,15 @@
   }
 }
 
+.flex-1 {
+  flex: 1;
+}
+
+.flex-centered-container {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   width: 100%;
   padding-right: var(--space-xs);

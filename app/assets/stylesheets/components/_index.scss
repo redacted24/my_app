@@ -1,0 +1,17 @@
+@use "mixins/media" as mixins;
+
+.index-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: var(--space-xl);
+}
+
+.index-content {
+  @include mixins.media(tabletAndUp) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+}
