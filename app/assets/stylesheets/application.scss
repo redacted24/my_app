@@ -15,6 +15,7 @@
 @use "config/reset";
 @use "config/overrides";
 @use "config/text_overrides";
+@use "config/globals";
 
 // Components
 @use "components/button";
@@ -23,6 +24,9 @@
 @use "components/tags";
 @use "components/experience";
 @use "components/socials";
+@use "components/featured_project";
+@use "components/homepage";
+@use "components/footer";
 
 // Layouts
 @use "layouts/container";

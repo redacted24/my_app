@@ -1,10 +1,7 @@
-<%= render "menu_bar" %>
-
-<div>
-  Here is a non-exhaustive list of all projects I currently have.
-</div>
-
-<% for project in @all_projects do %>
-  <a href="/project/<%= project.url_string %>"><%= project.name %></a>
+<a href="/"><i class="fa-solid fa-arrow-left"></i> Qiuyu Huang</a>
+<h2>Projects</h2>
+<% for project in @all_projects %>
+  <div>
+    <a href="/project/<%= project.url_string %>" class="no-color-a"><%= project.name %></a>
+  </div>
 <% end %>
-

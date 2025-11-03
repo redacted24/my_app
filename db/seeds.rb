@@ -58,7 +58,7 @@ project = Project.new(
     url_string: "duel_vision",
     tags: [ "React", "Websockets", "Mediapipe" ],
     github_link: "Developed a Windows desktop app that decrypts locally stored databases of a popular messaging service and
-monitors user chats for potentially sensitive topics",
+monitors user chats for potentially sensitive topics.",
     devpost_link: "",
     website_link: "",
     custom_link: "",

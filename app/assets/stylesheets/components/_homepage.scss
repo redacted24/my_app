@@ -1,0 +1,8 @@
+@use "mixins/media" as *;
+.heading-navigation {
+  display: none;
+
+  @include media(tabletAndUp) {
+    display: block;
+  }
+}

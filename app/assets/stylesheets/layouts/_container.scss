@@ -1,10 +1,22 @@
 @use "mixins/media" as mixins;
 
 .main-container {
-  margin-top: var(--space-s);
-  margin-bottom: var(--space-s);
   margin-left: var(--space-l);
   margin-right: var(--space-l);
+
+  @include mixins.media(tabletAndUp) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main-div {
+  display: block;
+
+  @include mixins.media(tabletAndUp) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .container {
@@ -18,5 +30,23 @@
     padding-right: var(--space-m);
     padding-left: var(--space-m);
     max-width: 60rem;
+  }
+}
+
+.sticky-section {
+  @include mixins.media(tabletAndUp) {
+    padding-bottom: var(--space-xl);
+    padding-top: var(--space-xl);
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    max-width: 60%;
+    margin-right: 5vw;
+  }
+}
+
+.scrolling-section {
+  @include mixins.media(tabletAndUp) {
+    max-width: 40%;
   }
 }

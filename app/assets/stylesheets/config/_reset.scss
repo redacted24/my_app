@@ -60,7 +60,9 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-l);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h3 {

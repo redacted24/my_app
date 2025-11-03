@@ -1,85 +1,95 @@
-<div>
-  <div>
-    <img src="" alt="">
-  </div>
-  <div class="mt-xl mb-xl">
-    <p class="introtext">Hey, I'm </p>
-    <h1 class="h1-override">Qiuyu Huang</h1>
-    <p class="mb-s">Software Engineer Student</p>
-    <div class="mb-xl muted-text">
-      I like building things from the ground up.
+<div class="main-div">
+  <div class="sticky-section pt-s">
+    <div class="mt-xl mb-xl">
+      <p class="introtext">Hey, I'm </p>
+      <h1 class="h1-override">Qiuyu Huang</h1>
+      <p class="mb-s">Software Engineer Student</p>
+      <div class="mb-xl muted-text">
+        I like building things from the ground up.
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/qiuyuhuang/" target="_blank" class="muted-text no-color-a"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/redacted24" target="_blank" class="muted-text no-color-a"><i class="fa-brands fa-square-github"></i></a>
+      </div>
     </div>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/qiuyuhuang/" target="_blank" class="no-color-a"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/redacted24" target="_blank" class="no-color-a"><i class="fa-brands fa-square-github"></i></a>
-    </div>
-  </div>
-  <div>
-    <div>
-      <a href="#about-me">About me</a>
-    </div>
-    <div>
-      <a href="#experience">Experience</a>
-    </div>
-    <div>
-      <a href="#projects">Projects</a>
-    </div>
-    <div>
-      <a href="#education">Education</a>
-    </div>
-  </div>
-  <div id="about-me">
-    <h2>About me</h2>
-    <div>
-      I'm an undergraduate software engineer studying at McGill University, Canada.
-      Currently, I am interested in low level programming.
+    <div class="heading-navigation">
+      <div>
+        <a href="#about-me">About me</a>
+      </div>
+      <div>
+        <a href="#experience">Experience</a>
+      </div>
+      <div>
+        <a href="#projects">Projects</a>
+      </div>
+      <div>
+        <a href="#education">Education</a>
+      </div>
     </div>
   </div>
-  <div id="experience">
-    <h2>Experience</h2>
-    <%= 
-      render "experience", 
-      dates: "July - October 2025",
-      name: "Corporation des Services du Barreau du Québec",
-      title: "Software Developer Intern",
-      location: "Montreal, Canada",
-      description: "Cleaned legacy data and developed a procedure to mitigate 
-      future users’ entry errors. Created a data processing tool reducing 
-      overall time spent by more than 200%, and optimized queries and server logic to reduce page loading times by 40%.",
-      tags: ["Python", "Java", "Frontend Development"]
-    %>
-  </div>
-  <div id="projects">
-    <h2>Projects</h2>
-    <p>Featured projects</p>
-    <% for project in @projects.where(featured: 1).order(date: :desc) %>
-      <p>Date: <%= project.date %></p>
-      <p>Name: <%= project.name %></p>
-      <p>Description: <%= project.description %></p>
-      <p>Github link: <%= project.github_link %></p>
-      <% if project.overview_image? %>
-        <%= image_tag project.overview_image %>
+  <div class="scrolling-section">
+    <div id="about-me">
+      <h2>ABOUT ME</h2>
+      <div>
+        <p>
+          I am an undergraduate software engineer studying at McGill University, Canada.
+          My passions are in low level software development, cybersecurity and game development.
+        </p>
+        <br>
+        <p>
+          In my spare time, I like practicing kendo, playing chess, and building obnoxious farms in Minecraft.
+        </p>
+      </div>
+    </div>
+    <div id="experience">
+      <h2>EXPERIENCE</h2>
+      <%= 
+  render "experience", 
+  dates: "July - October 2025",
+  name: "Corporation des Services du Barreau du Québec",
+  title: "Software Developer Intern",
+  url: "https://csbq.ca",
+  location: "Montreal, Canada",
+  description: "Cleaned legacy data and developed a procedure to mitigate 
+  future users’ entry errors. Created a data processing tool reducing 
+  overall time spent by more than 200%, and optimized queries and server logic to reduce page loading times by 40%.",
+  tags: ["Python", "Java", "Frontend Development"]
+  %>
+    </div>
+    <div id="projects">
+      <h2>Projects</h2>
+      <% for project in @projects.where(featured: 1).order(date: :desc) %>
+        <%= 
+  render "featured_project",
+  dates: project.date,
+  name: project.name,
+  description: project.description,
+  url: "/project/" + project.url_string,
+  github_link: project.github_link,
+  tags: project.tags
+  %>
       <% end %>
-    <% end %>
-  </div>
-  <a href="">See all -></a>
-  <div id="education">
-    <h2>Education</h2>
-    <%= 
-      render "education", 
-      dates: "2024-2028",
-      name: "McGill University",
-      major: "Software Engineering",
-      location: "Montreal, Canada",
-      involvement: ["Kendo club", "GameDev McGill"]
-    %>
-    <%= 
-      render "education", 
-      dates: "2023-2024",
-      name: "Marianopolis College",
-      major: "CEGEP",
-      location: "Montreal, Canada",
-      involvement: ["The Engineering Society"]
-    %>
+    </div>
+    <!-- <a href="/project" class="text-bold">See all projects<i class="fa-solid fa-arrow-right"></i></a> -->
+    <div id="education">
+      <h2>Education</h2>
+      <%= 
+  render "education", 
+  dates: "2024 - 2028",
+  name: "McGill University",
+  major: "B. Eng, Software Engineering",
+  location: "Montreal, Canada",
+  involvement: ["Kendo club", "GameDev McGill"]
+  %>
+      <%= 
+  render "education", 
+  dates: "2023 - 2024",
+  name: "Marianopolis College (CEGEP)",
+  major: "DEC Pure & Applied Sciences",
+  location: "Montreal, Canada",
+  involvement: ["The Engineering Society"]
+  %>
+    </div>
+    <%= render "footer" %>
   </div>
 </div>

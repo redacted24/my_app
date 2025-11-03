@@ -1,3 +1,13 @@
-<%= render "menu_bar" %>
-<div>This is a show page</div>
-<%= @project.name %>
+<a href="/"><i class="fa-solid fa-arrow-left"></i> Qiuyu Huang</a>
+<h2><%= @project.name %></h2>
+<div class="tag-container">
+  <% for tag in @project.tags %>
+    <div class="tag"><%= tag %></div>
+  <% end %>
+</div>
+<div>
+  <%= @project.description %>
+</div>
+<div>
+  <%= @project.date %>
+</div>
