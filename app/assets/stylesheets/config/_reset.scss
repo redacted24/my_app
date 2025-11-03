@@ -19,8 +19,8 @@ body {
   flex-direction: column;
   min-height: 100%;
 
-  background-color: var(--color-background);
-  color: var(--color-text-body);
+  background-color: var(--background-color);
+  color: var(--dark-text-color);
   line-height: var(--line-height-body);
   font-family: var(--font-family-sans);
 }
@@ -39,14 +39,20 @@ select {
   font: inherit;
 }
 
+i {
+  font-size: var(--font-size-s);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--color-text-header);
+  color: var(--dark-text-color);
   line-height: var(--line-height-headers);
+  margin-top: var(--space-xxxl);
+  margin-bottom: var(--space-xxl);
 }
 
 h1 {
@@ -66,7 +72,7 @@ h4 {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 200ms;
 

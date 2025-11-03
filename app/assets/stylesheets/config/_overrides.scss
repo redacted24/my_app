@@ -1,0 +1,16 @@
+@use "mixins/media" as *;
+.no-color-a {
+  color: var(--dark-text-color);
+  text-decoration: none;
+  transition: color 200ms;
+
+  @include media(tabletAndUp) {
+    cursor: pointer;
+  }
+
+  // &:hover,
+  // &:focus,
+  // &:active {
+  //   color: var(--color-primary-rotate);
+  // }
+}

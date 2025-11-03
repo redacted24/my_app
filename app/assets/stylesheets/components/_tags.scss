@@ -1,0 +1,22 @@
+.tag {
+  background-color: var(--secondary-color);
+  width: fit-content;
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+  padding-top: var(--space-xxxs);
+  padding-bottom: var(--space-xxxs);
+
+  margin-right: var(--space-xs);
+  margin-bottom: var(--space-xs);
+
+  border-radius: var(--font-size-s);
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--space-s);
+}

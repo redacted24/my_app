@@ -1,25 +1,31 @@
 <div>
-  <p>(debug) This is the info page, or main landing page, of Qiuyu's website.</p>
-</div>
-<div>
   <div>
     <img src="" alt="">
   </div>
-  <div>
-    <p>Qiuyu Huang</p>
-    <p>@redacted24</p>
-    <p>McGill University</p>
-    <p>Software Engineering U2</p>
-    <p>Canada</p>
+  <div class="mt-xl mb-xl">
+    <p class="introtext">Hey, I'm </p>
+    <h1 class="h1-override">Qiuyu Huang</h1>
+    <p class="mb-s">Software Engineer Student</p>
+    <div class="mb-xl muted-text">
+      I like building things from the ground up.
+    </div>
+    <p><i class="fa-solid fa-user"></i> redacted24</p>
+    <p><i class="fa-solid fa-graduation-cap"></i> McGill University</p>
+    <p><i class="fa-solid fa-location-dot"></i> Canada</p>
   </div>
   <div>
-    I like building things from the ground up.
-  </div>
-  <div>
-    <a href="#about-me">About me</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
+    <div>
+      <a href="#about-me">About me</a>
+    </div>
+    <div>
+      <a href="#experience">Experience</a>
+    </div>
+    <div>
+      <a href="#projects">Projects</a>
+    </div>
+    <div>
+      <a href="#education">Education</a>
+    </div>
   </div>
   <div id="about-me">
     <h2>About me</h2>
@@ -32,11 +38,14 @@
     <h2>Experience</h2>
     <%= 
       render "experience", 
-      dates: "2025",
+      dates: "July - October 2025",
       name: "Corporation des Services du Barreau du Québec",
+      title: "Software Developer Intern",
       location: "Montreal, Canada",
-      description: "This is a description for the job",
-      tags: ["Tag one", "Tag two"]
+      description: "Cleaned legacy data and developed a procedure to mitigate 
+      future users’ entry errors. Created a data processing tool reducing 
+      overall time spent by more than 200%, and optimized queries and server logic to reduce page loading times by 40%.",
+      tags: ["Python", "Java", "Frontend Development"]
     %>
   </div>
   <div id="projects">
@@ -52,6 +61,7 @@
       <% end %>
     <% end %>
   </div>
+  <a href="">See all -></a>
   <div id="education">
     <h2>Education</h2>
     <%= 

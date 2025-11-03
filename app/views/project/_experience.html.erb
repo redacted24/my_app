@@ -1,19 +1,22 @@
-<div>
-  <div>
+<div class="mb-xl">
+  <div class="exp-dates">
     Dates: <%= dates %>
   </div>
-  <div>
-    <%= name %>
+  <div class="exp-name">
+    <a href="https://csbq.ca" target="_blank" class="no-color-a"><%= name %> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </div>
-  <div>
+  <div class="exp-title">
+    <%= title %>
+  </div>
+  <div class="exp-location">
     <%= location %>
   </div>
-  <div>
+  <div class="exp-description">
     <%= description %>
   </div>
-  <div>
+  <div class="tag-container">
     <% for tag in tags do %>
-      <div>
+      <div class="tag">
         <%= tag %>
       </div>
     <% end %>
