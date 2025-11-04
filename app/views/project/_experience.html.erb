@@ -1,24 +1,26 @@
-<div class="mb-xl">
-  <div class="exp-dates">
-    <%= dates %>
+<a href="<%= url %>" target="_blank" class="no-color-a">
+  <div class="mb-l exp-item">
+    <div class="exp-dates">
+      <%= dates %>
+    </div>
+    <div class="exp-name">
+      <%= name %> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </div>
+    <div class="exp-title">
+      <%= title %>
+    </div>
+    <div class="exp-location">
+      <%= location %>
+    </div>
+    <div class="exp-description">
+      <%= description %>
+    </div>
+    <div class="tag-container">
+      <% for tag in tags do %>
+        <div class="tag">
+          <%= tag %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <div class="exp-name">
-    <a href="<%= url %>" target="_blank" class="no-color-a"><%= name %> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-  </div>
-  <div class="exp-title">
-    <%= title %>
-  </div>
-  <div class="exp-location">
-    <%= location %>
-  </div>
-  <div class="exp-description">
-    <%= description %>
-  </div>
-  <div class="tag-container">
-    <% for tag in tags do %>
-      <div class="tag">
-        <%= tag %>
-      </div>
-    <% end %>
-  </div>
-</div>
+</a>

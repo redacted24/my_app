@@ -2,6 +2,10 @@
   margin-bottom: var(--space-xl);
 }
 
+.mb-l {
+  margin-bottom: var(--space-l);
+}
+
 .mb-m {
   margin-bottom: var(--space-m);
 }
@@ -38,6 +42,10 @@
 
 .pt-s {
   padding-top: var(--space-s);
+}
+
+.pl-s {
+  padding-left: var(--space-s);
 }
 
 .padding-s {

@@ -1,6 +1,6 @@
 @use "mixins/media" as *;
 .no-color-a {
-  color: var(--dark-text-color);
+  color: inherit;
   text-decoration: none;
   transition: color 200ms;
 
@@ -8,11 +8,11 @@
     cursor: pointer;
   }
 
-  // &:hover,
-  // &:focus,
-  // &:active {
-  //   color: var(--color-primary-rotate);
-  // }
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+  }
 }
 
 #about-me-header {

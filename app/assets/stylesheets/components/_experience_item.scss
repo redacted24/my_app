@@ -1,0 +1,17 @@
+.exp-item {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+
+  padding: var(--space-s);
+  left: var(--negative-space-s);
+  position: relative;
+
+  &:hover {
+    border: 1px solid var(--dark-text-color-muted);
+    background-color: #131313;
+  }
+  
+}
