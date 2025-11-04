@@ -3,7 +3,7 @@
     <a href="/project" class="mt-xl"><i class="fa-solid fa-arrow-left"></i> All projects</a>
     <h2 class="no-bot-margin-header"><%= @project.name %></h2>
     <p class="mb-xl mt-xs muted-text"><%= @project.date.year %></p>
-    <%= @project.description.html_safe %>
+    <%= @project.description %>
     <div class="tag-container mt-xl mb-xl">
       <% for tag in @project.tags %>
         <div class="tag"><%= tag %></div>
