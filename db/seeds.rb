@@ -25,7 +25,7 @@ project = Project.new(
     comments: "This project is my first ever \"real\" project, and I enjoyed coding it with my friend during CEGEP.",
     active: 0,
     unreleased: 0,
-    description: "An interactive website to learn how to play poker, and play against different poker playstyles. <br><br>Developed as part of the Capstone project at Marianopolis College.",
+    description: "An interactive website to learn how to play poker, and play against different poker playstyles. Developed as part of the Capstone project at Marianopolis College.",
     featured: 1,
     date: Time.new(2024, 03, 01)
 )
