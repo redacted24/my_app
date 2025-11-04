@@ -89,3 +89,22 @@ project = Project.new(
     date: Time.new(2024, 01, 02)
 )
 project.save
+
+# Portfolio
+project = Project.new(
+    name: "Portfolio website",
+    url_string: "portfolio",
+    tags: [ "Ruby on Rails", "Kamal" ],
+    github_link: "https://github.com/redacted24/my_app",
+    devpost_link: "",
+    website_link: "",
+    custom_link: "",
+    comments: "My first portfolio app ever!",
+    active: 1,
+    unreleased: 0,
+    description: "Designed, created and deployed a personal portfolio website.",
+    featured: 1,
+    date: Time.new(2025, 11, 04)
+)
+project.overview_image.attach(io: File.open("app/assets/images/portfoliov1.png"), filename: "portfoliov1.png")
+project.save
