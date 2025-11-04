@@ -9,9 +9,10 @@
   left: var(--negative-space-s);
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     border: 1px solid var(--dark-text-color-muted);
     background-color: #131313;
   }
-  
 }
