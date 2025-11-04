@@ -2,9 +2,9 @@
   <div class="index-content">
     <a href="/"><i class="fa-solid fa-arrow-left"></i> Qiuyu Huang</a>
     <h2>Projects</h2>
-    <% for project in @all_projects %>
-      <div>
-        <a href="/project/<%= project.url_string %>" class="no-color-a"><%= project.name %></a>
+    <% for project in @all_projects.order(date: :desc) %>
+      <div class="mb-m">
+        <span class="muted-text"><%= project.date.year %> - </span> <a href="/project/<%= project.url_string %>" class="no-color-a bold-text"><%= project.name %></a>&nbsp&nbsp&nbsp<i class="fa-solid fa-arrow-up-right-from-square"></i>
       </div>
     <% end %>
   </div>

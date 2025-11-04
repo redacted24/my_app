@@ -1,7 +1,8 @@
-<%= 
-  render "project/infocards/template",
-  infocard_color: "infocard-blue",
-  callout: "Links",
-  display: '<i class="fa-solid fa-link"></i>',
-  infocard_content: content
-%>
+<div class="mt-m mb-m">
+  <div class="infocard-title infocard-grey">
+    Links <i class="fa-solid fa-link"></i>
+  </div>
+  <div class="infocard-content padding-s">
+    <a href="<%= content %>" target="_blank"><%= content.split('.', 2)[1] %></a>
+  </div>
+</div>

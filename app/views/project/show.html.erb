@@ -1,15 +1,30 @@
 <div class="show-container flex-1">
   <div class="show-content">
     <a href="/project" class="mt-xl"><i class="fa-solid fa-arrow-left"></i> All projects</a>
-    <h2><%= @project.name %></h2>
-    <div class="tag-container">
+    <h2 class="no-bot-margin-header"><%= @project.name %></h2>
+    <p class="mb-xl mt-xs muted-text"><%= @project.date.year %></p>
+    <%= @project.description.html_safe %>
+    <div class="tag-container mt-xl mb-xl">
       <% for tag in @project.tags %>
         <div class="tag"><%= tag %></div>
       <% end %>
     </div>
-    <%= render 'project/infocards/card_links', content: @project.github_link %>
-    <div>
-      <%= @project.date %>
-    </div>
+    <% if !@project.active %>
+      <%= render "project/infocards/card_inactive" %>
+    <% end %>
+    <% if @project.unreleased %>
+      <%= render "project/infocards/card_unreleased" %>
+    <% end %>
+    <% if @project.github_link != "" %>
+      <%= render 'project/infocards/card_links', content: @project.github_link %>
+    <% else %>
+      <%= render 'project/infocards/card_info', content: "This repository is private." %>
+    <% end %>
+    <% if @project.overview_image_attachment != nil %>
+      <%= render "project/infocards/card_overview_image", project: @project %>
+    <% end %>
+    <% if @project.comments != "" %>
+      <%= render "project/infocards/card_comments", content: @project.comments %>
+    <% end %>
   </div>
 </div>
