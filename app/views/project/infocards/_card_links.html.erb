@@ -3,6 +3,6 @@
     Links <i class="fa-solid fa-link"></i>
   </div>
   <div class="infocard-content padding-s">
-    <a href="<%= content %>" target="_blank"><%= content.split('.', 2)[1] %></a>
+    <a href="<%= content %>" target="_blank"><%= content[content.index('g')..] %></a>
   </div>
 </div>
