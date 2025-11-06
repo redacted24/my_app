@@ -51,7 +51,7 @@ monitors user chats for potentially sensitive topics.",
     long_description: "There exists a version of the app that stores the user messages locally, in an encrypted SQLite3 database.
     By finding a key stored in memory and decrypting this database, it is possible to analyze the activity of a user and
     monitor the chat messages for dangerous topics.<br><br>
-    This app was made with Java and its JavaFX GUI Framework.",
+    Made with Java and its JavaFX GUI framework.",
     featured: 1,
     date: Time.new(2025, 07, 07)
 )

@@ -33,7 +33,7 @@
       <div class="">
         <p>
           I am an undergraduate software engineer studying at McGill University, Canada.
-          My passions are in low level software development, cybersecurity and game development.
+          My interests are in low level software development, cybersecurity and game development.
         </p>
         <br>
         <p>
@@ -59,7 +59,7 @@
     <div id="projects">
       <h2 class="">Projects</h2>
       <% for project in @projects.where(featured: 1).order(date: :desc) %>
-      <%= 
+        <%= 
         render "featured_project",
         dates: project.date,
         name: project.name,
