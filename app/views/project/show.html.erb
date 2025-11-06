@@ -1,7 +1,7 @@
 <div class="show-container flex-1">
   <div class="show-content">
     <a href="/project" class="mt-xl"><i class="fa-solid fa-arrow-left"></i> All projects</a>
-    <h2 class="no-bot-margin-header"><%= @project.name %></h2>
+    <h2 class="no-bot-space-header"><%= @project.name %></h2>
     <p class="mb-xl mt-xs muted-text"><%= @project.date.year %></p>
     <%= @project.description %>
     <div class="tag-container mt-xl mb-xl">
@@ -11,6 +11,9 @@
     </div>
     <% if !@project.active %>
       <%= render "project/infocards/card_inactive" %>
+    <% end %>
+    <% if @project.in_development %>
+      <%= render "project/infocards/card_development" %>
     <% end %>
     <% if @project.unreleased %>
       <%= render "project/infocards/card_unreleased" %>

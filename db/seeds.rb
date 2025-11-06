@@ -26,6 +26,7 @@ project = Project.new(
     active: 0,
     unreleased: 0,
     description: "An interactive website to learn how to play poker, and play against different poker playstyles. Developed as part of the Capstone project at Marianopolis College.",
+    in_development: 0,
     featured: 1,
     date: Time.new(2024, 03, 01)
 )
@@ -43,7 +44,8 @@ project = Project.new(
     custom_link: "",
     comments: "",
     active: 1,
-    unreleased: 1,
+    unreleased: 0,
+    in_development: 1,
     description: "Developed a Windows desktop app that decrypts locally stored databases of a popular messaging service and
 monitors user chats for potentially sensitive topics.",
     featured: 1,
@@ -64,6 +66,7 @@ project = Project.new(
     comments: "This project was done during McHacks, McGill University's hackathon. It was the most fun I've had coding in a hackathon!",
     active: 0,
     unreleased: 0,
+    in_development: 0,
     description: "Integrated computer vision through MediaPipe to enable players to control and shoot spaceships with hand
 movements.",
     featured: 0,
@@ -84,6 +87,7 @@ project = Project.new(
     comments: "This project was done at one of my first ever hackathons. Although we did not win anything, it was a great learning opportunity!",
     active: 0,
     unreleased: 0,
+    in_development: 0,
     description: "Designed a solution for a hackathon problem involving reservation schedule optimization for an auto repair shop.",
     featured: 0,
     date: Time.new(2024, 01, 02)
@@ -102,6 +106,7 @@ project = Project.new(
     comments: "My first portfolio app ever!",
     active: 1,
     unreleased: 0,
+    in_development: 0,
     description: "Designed, created and deployed a personal portfolio website.",
     featured: 1,
     date: Time.new(2025, 11, 04)
