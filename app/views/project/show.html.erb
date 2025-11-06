@@ -18,6 +18,9 @@
     <% if @project.unreleased %>
       <%= render "project/infocards/card_unreleased" %>
     <% end %>
+    <% if @project.long_description != nil %>
+      <%= render "project/infocards/card_about", content: @project.long_description %>
+    <% end %>
     <% if @project.github_link != "" %>
       <%= render 'project/infocards/card_links', content: @project.github_link %>
     <% else %>
