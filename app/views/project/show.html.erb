@@ -21,13 +21,13 @@
     <% if @project.long_description != nil %>
       <%= render "project/infocards/card_about", content: @project.long_description %>
     <% end %>
+    <% if @project.overview_image_attachment != nil %>
+      <%= render "project/infocards/card_overview_image", project: @project %>
+    <% end %>
     <% if @project.github_link != "" %>
       <%= render 'project/infocards/card_links', content: @project.github_link %>
     <% else %>
       <%= render 'project/infocards/card_info', content: "This repository is private." %>
-    <% end %>
-    <% if @project.overview_image_attachment != nil %>
-      <%= render "project/infocards/card_overview_image", project: @project %>
     <% end %>
     <% if @project.comments != "" %>
       <%= render "project/infocards/card_comments", content: @project.comments %>
