@@ -2,10 +2,12 @@
 
 .show-container {
   margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
 
   @include mixins.media(tabletAndUp) {
-    display: flex;
-    justify-content: center;
+    align-items: center;
   }
 }
 

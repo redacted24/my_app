@@ -1,5 +1,5 @@
-<div class="show-container flex-1">
-  <div class="show-content">
+<div class="show-container">
+  <div class="show-content flex-1">
     <a href="/project" class="mt-xl"><i class="fa-solid fa-arrow-left"></i> All projects</a>
     <h2 class="no-bot-space-header"><%= @project.name %></h2>
     <p class="mb-xl mt-xs muted-text"><%= @project.date.year %></p>
@@ -33,4 +33,5 @@
       <%= render "project/infocards/card_comments", content: @project.comments %>
     <% end %>
   </div>
+  <%= render "footer" %>
 </div>

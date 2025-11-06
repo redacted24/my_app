@@ -2,10 +2,12 @@
 
 .index-container {
   margin-top: var(--space-xl);
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
 
   @include mixins.media(tabletAndUp) {
-    display: flex;
-    justify-content: center;
+    align-items: center;
   }
 }
 

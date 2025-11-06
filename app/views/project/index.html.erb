@@ -1,5 +1,5 @@
-<div class="index-container flex-1">
-  <div class="index-content">
+<div class="index-container">
+  <div class="index-content flex-1">
     <a href="/"><i class="fa-solid fa-arrow-left"></i> Qiuyu Huang</a>
     <h2>Projects</h2>
     <% for project in @all_projects.order(date: :desc) %>
@@ -8,4 +8,5 @@
       </div>
     <% end %>
   </div>
+  <%= render "footer" %>
 </div>
