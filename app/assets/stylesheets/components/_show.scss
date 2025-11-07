@@ -16,3 +16,17 @@
     width: 30rem;
   }
 }
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-header-github {
+  font-size: var(--font-size-xl);
+}
+
+.project-year-commits {
+  display: flex;
+  justify-content: space-between;
+}

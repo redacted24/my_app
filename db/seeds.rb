@@ -10,6 +10,7 @@
 #
 
 # clean slate
+# Only run if Project exists
 Project.delete_all
 ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
