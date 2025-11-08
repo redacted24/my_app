@@ -31,7 +31,7 @@ project = Project.new(
     featured: 1,
     date: Time.new(2024, 03, 01)
 )
-project.overview_image.attach(io: File.open("app/assets/images/poker_playground_preview.png"), filename: "pokerpreview.png")
+project.overview_image.attach(io: File.open("app/assets/images/poker_playground_preview.png"), filename: "pokerpreview.png").variant(saver: { quality: 50 })
 project.save
 
 # chatanalyzer
@@ -116,5 +116,5 @@ project = Project.new(
     featured: 1,
     date: Time.new(2025, 11, 04)
 )
-project.overview_image.attach(io: File.open("app/assets/images/portfoliov1.png"), filename: "portfoliov1.png")
+project.overview_image.attach(io: File.open("app/assets/images/portfoliov1.png"), filename: "portfoliov1.png").variant(saver: { quality: 50 })
 project.save

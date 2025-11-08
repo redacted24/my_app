@@ -18,6 +18,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 # sass
 gem "dartsass-rails"
+# image processing
+gem "image_processing"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -40,7 +42,7 @@ gem "kamal", require: true
 gem "thruster", require: false
 
 # OctoKit Github API
-gem 'octokit', require: true
+gem "octokit", require: true
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

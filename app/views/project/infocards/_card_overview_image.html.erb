@@ -3,6 +3,6 @@
     Preview <i class="fa-solid fa-image"></i>
   </div>
   <div class="infocard-content">
-    <%= image_tag project.overview_image %>
+    <%= image_tag project.overview_image.variant(saver: {quality: 30}) %>
   </div>
 </div>
