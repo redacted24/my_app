@@ -118,3 +118,26 @@ project = Project.new(
 )
 project.overview_image.attach(io: File.open("app/assets/images/portfoliov1.png"), filename: "portfoliov1.png").variant(saver: { quality: 50 })
 project.save
+
+
+
+# Courier robot
+project = Project.new(
+    name: "Courier Robot",
+    url_string: "courier_robot",
+    tags: [ "BrickPi", "Python" ],
+    # github_link: "https://github.com/flavieq88/courier_robot",
+    github_link: "",
+    devpost_link: "",
+    website_link: "",
+    custom_link: "",
+    comments: "",
+    active: 1,
+    unreleased: 0,
+    in_development: 1,
+    description: "This project was developed in the context of ECSE 211 - Design Principles and Methods.
+    The goal is to create a delivery robot capable of delivering packages to different areas based on given criteria.",
+    featured: 1,
+    date: Time.new(2025, 11, 04)
+)
+project.save
