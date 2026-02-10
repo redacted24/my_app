@@ -165,3 +165,23 @@ project.overview_image.attach(io: File.open("app/assets/images/gamejam26_titlesc
 project.more_overview_images.attach(io: File.open("app/assets/images/gamejam26_cutscene.png"), filename: "gamejam2.png")
 project.more_overview_images.attach(io: File.open("app/assets/images/gamejam26_example.png"), filename: "gamejam3.png")
 project.save
+
+# Random Walk C
+project = Project.new(
+    name: "Random Walk in C",
+    url_string: "randwalk",
+    tags: [ "C", "SDL2" ],
+    github_link: "https://github.com/redacted24/random_walk",
+    devpost_link: "",
+    website_link: "",
+    custom_link: "",
+    comments: "A very small project, done as an introduction to graphics programming",
+    active: 1,
+    unreleased: 0,
+    in_development: 0,
+    description: "A simple random walk built with Simple MediaDirect Layer 2. Choose the number of walks to generate, and visualize it all with nice colors.",
+    featured: 1,
+    date: Time.new(2025, 12, 10)
+)
+project.overview_image.attach(io: File.open("app/assets/images/randwalk.gif"), filename: "randwalk.gif")
+project.save
