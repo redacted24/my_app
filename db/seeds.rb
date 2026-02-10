@@ -126,18 +126,40 @@ project = Project.new(
     name: "Courier Robot",
     url_string: "courier_robot",
     tags: [ "BrickPi", "Python" ],
-    # github_link: "https://github.com/flavieq88/courier_robot",
-    github_link: "",
+    github_link: "https://github.com/flavieq88/courier_robot",
     devpost_link: "",
     website_link: "",
     custom_link: "",
     comments: "",
     active: 1,
     unreleased: 0,
-    in_development: 1,
+    in_development: 0,
     description: "This project was developed in the context of ECSE 211 - Design Principles and Methods.
     The goal is to create a delivery robot capable of delivering packages to different areas based on given criteria.",
     featured: 1,
     date: Time.new(2025, 11, 04)
 )
+project.save
+
+# Gamejam 2026
+project = Project.new(
+    name: "Gamejam 2026",
+    url_string: "gamejam26",
+    tags: [ "GDScript" ],
+    github_link: "https://github.com/redacted24/gamejam26",
+    devpost_link: "",
+    website_link: "",
+    custom_link: "",
+    comments: "Although the game is far from perfect, it was very fun to work on it.",
+    active: 1,
+    unreleased: 0,
+    in_development: 0,
+    description: "A small vampire survivor-esque game made during McGameJam 2026. 
+    Fight your way through levels while keeping your hunger in check.",
+    featured: 0,
+    date: Time.new(2026, 02, 10)
+)
+project.overview_image.attach(io: File.open("app/assets/images/gamejam26_titlescreen.png"), filename: "gamejam1.png").variant(saver: { quality: 50 })
+project.more_overview_images.attach(io: File.open("app/assets/images/gamejam26_cutscene.png"), filename: "gamejam2.png")
+project.more_overview_images.attach(io: File.open("app/assets/images/gamejam26_example.png"), filename: "gamejam3.png")
 project.save

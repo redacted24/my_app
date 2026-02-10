@@ -31,6 +31,11 @@
     <% if @project.overview_image_attachment != nil %>
       <%= render "project/infocards/card_overview_image", project: @project %>
     <% end %>
+    <% if @project.more_overview_images_attachments.size != 0%>
+      <% for image in @project.more_overview_images_attachments %>
+        <%= render "project/infocards/card_more_images", image: image %>
+      <% end %>
+    <% end %>
     <% if @project.github_link != "" %>
       <%= render 'project/infocards/card_links', content: @project.github_link %>
     <% else %>

@@ -11,6 +11,8 @@
 }
 
 .exp-name {
+  display: flex;
+  justify-content: space-between;
   color: var(--dark-text-color);
   font-weight: bold;
 }
@@ -30,4 +32,12 @@
 
 .exp-title {
   @include text;
+}
+
+.exp-closed-source {
+  font-size: var(--font-size-s);
+  font-weight: normal;
+
+  padding: var(--space-xxs);
+  border: 1px solid var(--red-color);
 }
