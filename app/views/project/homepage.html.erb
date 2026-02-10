@@ -5,7 +5,9 @@
       <h1 class="h1-override">Qiuyu Huang</h1>
       <p class="mb-s">Software Engineering Student</p>
       <div class="mb-xl mt-xl muted-text">
-        I like building things from the ground up.
+        I like building things from the ground up. <br>
+        github: <a target="_blank" href="https://github.com/redacted24">@redacted24</a><br>
+        email: <a target="_blank" href="mailto:qiu.y.huang@mail.mcgill.ca">huangq4 [at] outlook (dot) com</a>
       </div>
       <div class="socials">
         <a href="https://www.linkedin.com/in/qiuyuhuang/" target="_blank" class="muted-text no-color-a"><i class="fa-brands fa-linkedin"></i></a>
@@ -22,9 +24,6 @@
       <div>
         <a href="#projects">Projects</a>
       </div>
-      <div>
-        <a href="#education">Education</a>
-      </div>
     </div>
   </div>
   <div class="scrolling-section">
@@ -32,12 +31,12 @@
       <h2 class="" id="about-me-header">ABOUT ME</h2>
       <div class="">
         <p>
-          I am an undergraduate software engineer studying at McGill University, Canada.
+          Just a kid trying to learn every day.<br>
           My interests are in low level software development, cybersecurity and game development.
         </p>
         <br>
         <p>
-          In my spare time, I like practicing kendo, playing chess, and building obnoxious farms in Minecraft.
+          In my spare time, you can usually find me playing chess, snowboarding in the park, practicing kendo and rolling nat 20s in <a target="_blank" href="https://baldursgate3.game/">Baldur's Gate 3</a>.
         </p>
       </div>
     </div>
@@ -46,10 +45,8 @@
       <%= 
         render "experience", 
         dates: "July - October 2025",
-        name: "Corporation des Services du Barreau du Québec",
-        title: "Software Developer Intern",
+        name: "Software Developer Intern - CSBQ",
         url: "https://csbq.ca",
-        location: "Montreal, Canada",
         description: "Cleaned legacy data and developed a procedure to mitigate 
         future users’ entry errors. Created a data processing tool reducing 
         overall time spent by more than 200%, and optimized queries and server logic to reduce page loading times by 40%.",
@@ -71,25 +68,6 @@
       <% end %>
     </div>
     <a href="/project" class=" text-bold">See all projects<i class="fa-solid fa-arrow-right"></i></a>
-    <div id="education">
-      <h2 class="">Education</h2>
-      <%= 
-        render "education", 
-        dates: "2024 - 2028",
-        name: "McGill University",
-        major: "B. Eng, Software Engineering",
-        location: "Montreal, Canada",
-        involvement: ["Kendo club", "GameDev McGill"]
-      %>
-      <%= 
-        render "education", 
-        dates: "2023 - 2024",
-        name: "Marianopolis College (CEGEP)",
-        major: "DEC Pure & Applied Sciences",
-        location: "Montreal, Canada",
-        involvement: ["The Engineering Society"]
-      %>
-    </div>
     <%= render "footer" %>
   </div>
 </div>
