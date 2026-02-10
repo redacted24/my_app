@@ -77,6 +77,8 @@ movements.",
     featured: 0,
     date: Time.new(2024, 01, 01)
 )
+project.overview_image.attach(io: File.open("app/assets/images/duelvision.jpg"), filename: "duelvisiontitle.jpg")
+project.more_overview_images.attach(io: File.open("app/assets/images/duelvision_stats.jpg"), filename: "duelvisionstats.jpg")
 project.save
 
 
