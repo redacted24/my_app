@@ -1,5 +1,6 @@
 .tag {
-  background-color: var(--secondary-color);
+  border: 1px solid var(--accent-color);
+  background-color: var(--secondary-color-bg);
   width: fit-content;
   font-size: var(--font-size-xs);
   font-weight: bold;
@@ -9,10 +10,8 @@
   padding-top: var(--space-xxxs);
   padding-bottom: var(--space-xxxs);
 
-  margin-right: var(--space-xs);
+  margin-right: var(--space-s);
   margin-bottom: var(--space-xs);
-
-  border-radius: var(--font-size-s);
 }
 
 .tag-container {
