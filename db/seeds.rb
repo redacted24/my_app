@@ -29,9 +29,11 @@ project = Project.new(
     description: "An interactive website to learn how to play poker, and play against different poker playstyles. Developed as part of the Capstone project at Marianopolis College.",
     in_development: 0,
     featured: 1,
-    date: Time.new(2024, 03, 01)
+    date: Time.new(2024, 03, 01),
+    opensource: true,
+
+    preview_image: "images/poker_playground_preview.png"
 )
-project.overview_image.attach(io: File.open("app/assets/images/poker_playground_preview.png"), filename: "pokerpreview.png").variant(saver: { quality: 50 })
 project.save
 
 # chatanalyzer
@@ -54,7 +56,10 @@ monitors user chats for potentially sensitive topics.",
     monitor the chat messages.<br><br>
     Made with Java and its JavaFX GUI framework.",
     featured: 1,
-    date: Time.new(2025, 07, 07)
+    date: Time.new(2025, 07, 07),
+    opensource: false,
+
+    preview_image: "",
 )
 project.save
 
@@ -75,10 +80,12 @@ project = Project.new(
     description: "Integrated computer vision through MediaPipe to enable players to control and shoot spaceships with hand
 movements.",
     featured: 0,
-    date: Time.new(2024, 01, 01)
+    date: Time.new(2024, 01, 01),
+    opensource: true,
+
+    preview_image: "images/duelvision.jpg",
+    extra_images: "images/duelvision_stats.jpg"
 )
-project.overview_image.attach(io: File.open("app/assets/images/duelvision.jpg"), filename: "duelvisiontitle.jpg")
-project.more_overview_images.attach(io: File.open("app/assets/images/duelvision_stats.jpg"), filename: "duelvisionstats.jpg")
 project.save
 
 
@@ -97,7 +104,11 @@ project = Project.new(
     in_development: 0,
     description: "Designed a solution for a hackathon problem involving reservation schedule optimization for an auto repair shop.",
     featured: 0,
-    date: Time.new(2024, 01, 02)
+    date: Time.new(2024, 01, 02),
+    opensource: true,
+
+    preview_image: "",
+    extra_images: ""
 )
 project.save
 
@@ -116,9 +127,12 @@ project = Project.new(
     in_development: 0,
     description: "Designed, created and deployed a personal portfolio website.",
     featured: 1,
-    date: Time.new(2025, 11, 04)
+    date: Time.new(2025, 11, 04),
+    opensource: true,
+
+    preview_image: "images/portfoliov1.png",
+    extra_images: "",
 )
-project.overview_image.attach(io: File.open("app/assets/images/portfoliov1.png"), filename: "portfoliov1.png").variant(saver: { quality: 50 })
 project.save
 
 
@@ -139,7 +153,11 @@ project = Project.new(
     description: "This project was developed in the context of ECSE 211 - Design Principles and Methods.
     The goal is to create a delivery robot capable of delivering packages to different areas based on given criteria.",
     featured: 1,
-    date: Time.new(2025, 11, 04)
+    date: Time.new(2025, 11, 04),
+    opensource: true,
+
+    preview_image: "",
+    extra_images: ""
 )
 project.save
 
@@ -159,11 +177,12 @@ project = Project.new(
     description: "A small vampire survivor-esque game made during McGameJam 2026. 
     Fight your way through levels while keeping your hunger in check.",
     featured: 0,
-    date: Time.new(2026, 02, 10)
+    date: Time.new(2026, 02, 10),
+    opensource: true,
+
+    preview_image: "images/gamejam26_titlescreen.png",
+    extra_images: "images/gamejam26_cutscene.png,images/gamejam26_example.png"
 )
-project.overview_image.attach(io: File.open("app/assets/images/gamejam26_titlescreen.png"), filename: "gamejam1.png").variant(saver: { quality: 50 })
-project.more_overview_images.attach(io: File.open("app/assets/images/gamejam26_cutscene.png"), filename: "gamejam2.png")
-project.more_overview_images.attach(io: File.open("app/assets/images/gamejam26_example.png"), filename: "gamejam3.png")
 project.save
 
 # Random Walk C
@@ -181,7 +200,10 @@ project = Project.new(
     in_development: 0,
     description: "A simple random walk built with Simple MediaDirect Layer 2. Choose the number of walks to generate, and visualize it all with nice colors.",
     featured: 1,
-    date: Time.new(2025, 12, 10)
+    date: Time.new(2025, 12, 10),
+    opensource: true,
+
+    preview_image: "images/randwalk.gif",
+    extra_images: ""
 )
-project.overview_image.attach(io: File.open("app/assets/images/randwalk.gif"), filename: "randwalk.gif")
 project.save

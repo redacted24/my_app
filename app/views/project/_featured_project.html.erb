@@ -2,7 +2,15 @@
   <div class="mb-l exp-item">
     <div class="exp-name">
       <%= name %>
+      <div>
+        opensource
+      </div>
     </div>
+    <% if preview_image_link != "" %>
+      <div class="project_preview_img">
+        <img src="<%= preview_image_link %>"></img>
+      </div>
+    <% end %>
     <div class="exp-description">
       <%= description %>
     </div>
