@@ -28,10 +28,10 @@
     <% if @project.long_description != nil %>
       <%= render "project/infocards/card_about", content: @project.long_description %>
     <% end %>
-    <% if @project.preview_image != "" %>
+    <% if @project.preview_image != "" and @project.extra_images != nil %>
       <%= render "project/infocards/card_overview_image", project: @project %>
     <% end %>
-    <% if @project.extra_images != ""%>
+    <% if @project.extra_images != "" and @project.extra_images != nil %>
       <% for imagelink in @project.extra_images.split(',',-1) %>
         <%= render "project/infocards/card_more_images", imagelink: imagelink %>
       <% end %>
