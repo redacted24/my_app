@@ -19,11 +19,23 @@
 }
 
 .closed-source-text {
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: var(--yellow-color-bg);
+  border: 1px solid var(--yellow-color);
+  font-size: var(--font-size-xs);
   font-weight: bold;
   color: var(--yellow-color);
 }
 
 .open-source-text {
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: var(--green-color-bg);
+  border: 1px solid var(--green-color);
+  font-size: var(--font-size-xs);
   font-weight: bold;
   color: var(--green-color);
 }
