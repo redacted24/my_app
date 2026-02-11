@@ -28,12 +28,12 @@
     <% if @project.long_description != nil %>
       <%= render "project/infocards/card_about", content: @project.long_description %>
     <% end %>
-    <% if @project.overview_image_attachment != nil %>
+    <% if @project.preview_image != "" %>
       <%= render "project/infocards/card_overview_image", project: @project %>
     <% end %>
-    <% if @project.more_overview_images_attachments.size != 0%>
-      <% for image in @project.more_overview_images_attachments %>
-        <%= render "project/infocards/card_more_images", image: image %>
+    <% if @project.extra_images != ""%>
+      <% for imagelink in @project.extra_images.split(',',-1) %>
+        <%= render "project/infocards/card_more_images", imagelink: imagelink %>
       <% end %>
     <% end %>
     <% if @project.github_link != "" %>

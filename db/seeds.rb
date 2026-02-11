@@ -126,7 +126,7 @@ project = Project.new(
     unreleased: 0,
     in_development: 0,
     description: "Designed, created and deployed a personal portfolio website.",
-    featured: 1,
+    featured: 0,
     date: Time.new(2025, 11, 04),
     opensource: true,
 
@@ -176,7 +176,7 @@ project = Project.new(
     in_development: 0,
     description: "A small vampire survivor-esque game made during McGameJam 2026. 
     Fight your way through levels while keeping your hunger in check.",
-    featured: 0,
+    featured: 1,
     date: Time.new(2026, 02, 10),
     opensource: true,
 
