@@ -15,6 +15,15 @@
 
 .project_preview_img {
   width: 100%;
-  padding-top: var(--space-s);
-  padding-bottom: var(--space-l);
+  padding-bottom: var(--space-m);
+}
+
+.closed-source-text {
+  font-weight: bold;
+  color: var(--yellow-color);
+}
+
+.open-source-text {
+  font-weight: bold;
+  color: var(--green-color);
 }

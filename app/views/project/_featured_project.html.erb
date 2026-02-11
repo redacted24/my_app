@@ -1,17 +1,23 @@
 <a href="<%= url %>" class="no-color-a">
   <div class="mb-l exp-item">
-    <div class="exp-name">
+    <div class="exp-name mb-m">
       <%= name %>
-      <div>
-        opensource
-      </div>
+      <% if opensource %>
+        <div class="open-source-text">
+          open source
+        </div>
+      <% else %>
+        <div class="closed-source-text">
+          closed source
+        </div>
+      <% end %>
     </div>
     <% if preview_image_link != "" %>
       <div class="project_preview_img">
         <img src="<%= preview_image_link %>"></img>
       </div>
     <% end %>
-    <div class="exp-description">
+    <div class="exp-description mb-m">
       <%= description %>
     </div>
     <div class="tag-container">
