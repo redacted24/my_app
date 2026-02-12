@@ -13,7 +13,7 @@
 
 .show-content {
   @include mixins.media(tabletAndUp) {
-    width: 30rem;
+    width: 40%;
   }
 }
 

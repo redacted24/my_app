@@ -32,7 +32,7 @@ project = Project.new(
     date: Time.new(2024, 03, 01),
     opensource: true,
 
-    preview_image: "images/poker_playground_preview.png"
+    preview_image: "poker_playground_preview.png"
 )
 project.save
 
@@ -83,8 +83,8 @@ movements.",
     date: Time.new(2024, 01, 01),
     opensource: true,
 
-    preview_image: "images/duelvision.jpg",
-    extra_images: "images/duelvision_stats.jpg"
+    preview_image: "duelvision.jpg",
+    extra_images: "duelvision_stats.jpg"
 )
 project.save
 
@@ -130,7 +130,7 @@ project = Project.new(
     date: Time.new(2025, 11, 04),
     opensource: true,
 
-    preview_image: "images/portfoliov1.png",
+    preview_image: "portfoliov1.png",
     extra_images: "",
 )
 project.save
@@ -180,8 +180,8 @@ project = Project.new(
     date: Time.new(2026, 02, 10),
     opensource: true,
 
-    preview_image: "images/gamejam26_titlescreen.png",
-    extra_images: "images/gamejam26_cutscene.png,images/gamejam26_example.png"
+    preview_image: "gamejam26_titlescreen.png",
+    extra_images: "gamejam26_cutscene.png,gamejam26_example.png"
 )
 project.save
 
@@ -203,7 +203,7 @@ project = Project.new(
     date: Time.new(2025, 12, 10),
     opensource: true,
 
-    preview_image: "images/randwalk.gif",
+    preview_image: "randwalk.gif",
     extra_images: ""
 )
 project.save

@@ -13,6 +13,6 @@
 
 .index-content {
   @include mixins.media(tabletAndUp) {
-    width: 50rem;
+    width: 40%;
   }
 }

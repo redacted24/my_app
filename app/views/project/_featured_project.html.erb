@@ -14,7 +14,7 @@
     </div>
     <% if preview_image_link != "" %>
       <div class="project_preview_img">
-        <img src="<%= preview_image_link %>"></img>
+        <%= image_tag(preview_image_link) %>
       </div>
     <% end %>
     <div class="exp-description mb-m">
