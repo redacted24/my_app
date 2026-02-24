@@ -15,5 +15,6 @@ body {
 
   @include media(tabletAndUp) {
     background-repeat: no-repeat;
+    backgroud-size: auto 100vh;
   }
 }
