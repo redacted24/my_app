@@ -1,3 +1,5 @@
+@use "mixins/media" as *;
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -6,8 +8,12 @@ body {
   background-image: url("bg_graphic.jpg");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: auto auto;
+  background-size: cover;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  @include media(tabletAndUp) {
+    background-repeat: no-repeat;
+  }
 }
