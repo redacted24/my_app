@@ -11,7 +11,8 @@
         I like building things from the ground up. <br>
         <br>
         github: <a target="_blank" href="https://github.com/redacted24">@redacted24</a><br>
-        email: <a target="_blank" href="mailto:huangq4@outlook.com">huangq4@outlook.com</a>
+        email: <a target="_blank" href="mailto:huangq4@outlook.com">huangq4@outlook.com</a><br>
+        photo: <a target="_blank" href="https://www.instagram.com/qiuyu__photo/">@qiuyu__photo</a>
       </div>
       <div class="socials">
         <a href="https://www.linkedin.com/in/qiuyuhuang/" target="_blank" class="muted-text no-color-a"><i class="fa-brands fa-linkedin"></i></a>
@@ -38,9 +39,8 @@
           Just a kid trying to learn every day.<br><br>
           My interests are in low level software development, cybersecurity and game development.
         </p>
-        <br>
         <p>
-          In my spare time, you can usually find me playing chess, snowboarding in the park, practicing kendo and rolling nat 20s in <a target="_blank" href="https://baldursgate3.game/">Baldur's Gate 3</a>.
+          In my spare time, you can usually find me editing pcitures, cooking, practicing kendo and working on my indie game!
         </p>
         <br>
         <p>
@@ -63,19 +63,21 @@
     </div>
     <div id="projects">
       <h2 class="">Projects</h2>
-      <% for project in @projects.where(featured: 1).order(date: :desc) %>
-        <%= 
-        render "featured_project",
-        dates: project.date,
-        name: project.name,
-        description: project.description,
-        url: "/project/" + project.url_string,
-        github_link: project.github_link,
-        tags: project.tags,
-        preview_image_link: project.preview_image,
-        opensource: project.opensource
-      %>
-      <% end %>
+      <div class="flex-multiple">
+        <% for project in @projects.where(featured: 1).order(date: :desc) %>
+          <%= 
+            render "featured_project",
+            dates: project.date,
+            name: project.name,
+            description: project.description,
+            url: "/project/" + project.url_string,
+            github_link: project.github_link,
+            tags: project.tags,
+            preview_image_link: project.preview_image,
+            opensource: project.opensource
+          %>
+        <% end %>
+      </div>
     </div>
     <a href="/project" class=" text-bold">See all projects<i class="fa-solid fa-arrow-right"></i></a>
     <%= render "footer" %>

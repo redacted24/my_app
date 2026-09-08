@@ -23,6 +23,10 @@
   flex: 1;
 }
 
+.flex {
+  display: flex;
+}
+
 .flex-centered-container {
   display: flex;
   justify-content: center;
@@ -49,7 +53,7 @@
     position: sticky;
     top: 0;
     max-height: 100vh;
-    max-width: 60%;
+    max-width: 40%;
     margin-right: 5vw;
   }
 }
@@ -58,4 +62,10 @@
   @include mixins.media(tabletAndUp) {
     max-width: 40%;
   }
+}
+
+.flex-multiple {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
 }
