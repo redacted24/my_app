@@ -1,50 +1,47 @@
-<div class="md:align-middle mt-10 flex flex-col min-h-[95vh]">
-  <div class="md:w-[40%] flex-1">
-    <a href="/project" class="mt-10"><i class="fa-solid fa-arrow-left"></i> All projects</a>
-    <div class="pt-10 flex justify-between">
-      <h2 class="p-0 m-0"><%= @project.name %></h2>
-      <% if @project.github_link != "" %>
-        <a href="<%= @project.github_link %>" target="_blank" class="text-gray-700"><i class="text-xl fa-brands fa-square-github"></i></a>
-      <% end %>
-    </div>
-    <div class="text-gray-700 mb-10 mt-5 flex justify-between">
-      <p><%= @project.date.year %></p>
-    </div>
-    <%= @project.description %>
-    <div class="flex flex-wrap mt-10 mb-10">
-      <% for tag in @project.tags %>
-        <div class="border border-solid border-blue-400 w-fit text-xs font-bold
-      pl-5 pr-5 pt-2 pb-2 mr-3 mb-3"><%= tag %></div>
-      <% end %>
-    </div>
-    <% if !@project.active %>
-      <%= render "project/infocards/card_inactive" %>
-    <% end %>
-    <% if @project.in_development %>
-      <%= render "project/infocards/card_development" %>
-    <% end %>
-    <% if @project.unreleased %>
-      <%= render "project/infocards/card_unreleased" %>
-    <% end %>
-    <% if @project.long_description != nil %>
-      <%= render "project/infocards/card_about", content: @project.long_description %>
-    <% end %>
-    <% if @project.preview_image != "" and @project.extra_images != nil %>
-      <%= render "project/infocards/card_overview_image", project: @project %>
-    <% end %>
-    <% if @project.extra_images != "" and @project.extra_images != nil %>
-      <% for imagelink in @project.extra_images.split(',',-1) %>
-        <%= render "project/infocards/card_more_images", imagelink: imagelink %>
-      <% end %>
-    <% end %>
+<%= render "sidebar" %>
+<div class="md:max-w-[40%] mt-[5vh]">
+  <%= link_to :back do %>
+    <i class="fa-solid fa-arrow-left"></i><span>Back</span>
+  <% end %>
+  <div class="pt-10 flex justify-between">
+    <h2 class="p-0 m-0"><%= @project.name %></h2>
     <% if @project.github_link != "" %>
-      <%= render 'project/infocards/card_links', content: @project.github_link %>
-    <% else %>
-      <%= render 'project/infocards/card_info', content: "This repository is private." %>
-    <% end %>
-    <% if @project.comments != "" %>
-      <%= render "project/infocards/card_comments", content: @project.comments %>
+      <a href="<%= @project.github_link %>" target="_blank" class="text-gray-700"><i class="text-xl fa-brands fa-square-github"></i></a>
     <% end %>
   </div>
+  <%= @project.description %>
+  <div class="flex flex-wrap mt-10 mb-10">
+    <% for tag in @project.tags %>
+      <%= render "tag", name: tag %>
+    <% end %>
+  </div>
+  <% if !@project.active %>
+    <%= render "project/infocards/card_inactive" %>
+  <% end %>
+  <% if @project.in_development %>
+    <%= render "project/infocards/card_development" %>
+  <% end %>
+  <% if @project.unreleased %>
+    <%= render "project/infocards/card_unreleased" %>
+  <% end %>
+  <% if @project.long_description != nil %>
+    <%= render "project/infocards/card_about", content: @project.long_description %>
+  <% end %>
+  <% if @project.preview_image != "" and @project.extra_images != nil %>
+    <%= render "project/infocards/card_overview_image", project: @project %>
+  <% end %>
+  <% if @project.extra_images != "" and @project.extra_images != nil %>
+    <% for imagelink in @project.extra_images.split(',',-1) %>
+      <%= render "project/infocards/card_more_images", imagelink: imagelink %>
+    <% end %>
+  <% end %>
+  <% if @project.github_link != "" %>
+    <%= render 'project/infocards/card_links', content: @project.github_link %>
+  <% else %>
+    <%= render 'project/infocards/card_info', content: "This repository is private." %>
+  <% end %>
+  <% if @project.comments != "" %>
+    <%= render "project/infocards/card_comments", content: @project.comments %>
+  <% end %>
   <%= render "footer" %>
 </div>

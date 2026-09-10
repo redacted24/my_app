@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "project#homepage"
   resources :project, param: :url_string
+  resources :feed
+  resources :photography
 end

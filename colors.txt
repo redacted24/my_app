@@ -1,0 +1,15 @@
+LIGHT MODE
+main accent
+green confirm
+yellow medium
+red error
+text color
+background color
+
+DARK MODE:
+main accent
+green confirm
+yellow medium
+red error
+text color
+background color

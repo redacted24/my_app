@@ -1,19 +1,15 @@
-<div class="mt-10 min-h-[95vh] flex flex-col md:align-middle">
-  <div class="md:w-[40%] flex">
-    <a href="/"><i class="fa-solid fa-arrow-left"></i> Qiuyu Huang</a>
-    <h2>Projects</h2>
-    <% for project in @all_projects.order(date: :desc) %>
+<%= render "sidebar" %>
+<div class="md:max-w-[40%] mt-[5vh]">
+  <%= link_to :back,  do %>
+    <i class="fa-solid fa-arrow-left"></i>Back
+  <% end %>
+  <h2>Projects</h2>
+  <div class="flex flex-wrap gap-y-3 justify-between">
+    <% for item in @all_projects.order(date: :desc) %>
       <%= 
         render "featured_project",
-        dates: project.date,
-        name: project.name,
-        description: project.description,
-        url: "/project/" + project.url_string,
-        github_link: project.github_link,
-        tags: project.tags,
-        opensource: project.opensource,
-        preview_image_link: project.preview_image
-      %>
+          project: item
+        %>
     <% end %>
   </div>
   <%= render "footer" %>
