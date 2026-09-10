@@ -10,15 +10,6 @@
   }
 }
 
-.main-div {
-  display: block;
-
-  @include mixins.media(tabletAndUp) {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 .flex-1 {
   flex: 1;
 }
