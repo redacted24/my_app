@@ -1,4 +1,6 @@
-<div class="md:pb-5 md:sticky md:top-0 md:max-h-screen md:max-w-[40%] md:mr-[5vw]">
+<div class="<%= !current_page?('/') ? 'hidden' : '' %>
+   xl:mt-0 xl:block xl:pb-5 xl:sticky xl:top-0 xl:max-h-screen 
+   xl:mr-[7%]">
   <div class="mt-[5vh]">
     <p>Hey, I'm </p>
     <%= link_to "/" do %>
@@ -20,15 +22,15 @@
       <a href="https://github.com/redacted24" target="_blank"><i class="text-4xl fa-brands fa-square-github"></i></a>
     </div>
   </div>
-  <div class="hidden md:block">
-    <div>
-      <a href="#about-me">Feed</a>
-    </div>
-    <div>
-      <a href="#projects">Projects</a>
-    </div>
-    <div>
-      <a href="#experience">Photography</a>
-    </div>
+  <div class="hidden xl:block">
+    <%= link_to "feed" do %>
+      <p>Feed</p>
+    <% end %>
+    <%= link_to "project" do %>
+      <p>Projects</p>
+    <% end %>
+    <%= link_to "photography" do %>
+      <p>Photography</p>
+    <% end %>
   </div>
 </div>
