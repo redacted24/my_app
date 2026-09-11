@@ -1,14 +1,16 @@
 <%= render "sidebar" %>
 <div class="xl:w-[40%] mt-[5vh]">
-  <%= link_to :back do %>
-    <i class="fa-solid fa-arrow-left"></i><span>Back</span>
-  <% end %>
-  <div class="pt-10 flex justify-between">
-    <h2 class="p-0 m-0"><%= @project.name %></h2>
-    <% if @project.github_link != "" %>
-      <a href="<%= @project.github_link %>" target="_blank" class="text-gray-700"><i class="text-xl fa-brands fa-square-github"></i></a>
+  <div class="flex justify-between">
+    <h2 class="p-0 mb-5 text-2xl font-bold"><%= @project.name %></h2>
+    <%= link_to :back do %>
+      <i class="fa-solid fa-arrow-left"></i><span>Back</span>
     <% end %>
   </div>
+  <% if @project.github_link != "" %>
+    <a href="<%= @project.github_link %>" target="_blank" class="text-gray-700">github</a>
+  <% end %>
+  <br>
+  <br>
   <%= @project.description %>
   <div class="flex flex-wrap mt-10 mb-10">
     <% for tag in @project.tags %>

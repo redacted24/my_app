@@ -1,21 +1,19 @@
 <a href="<%= url %>" target="_blank">
   <div class="mb-5 border border-solid 
-              transition duration-100 p-10 relative border-neutral-800 
-              bg-gray-800 
-              hover:bg-gray-700">
-    <div>
+              transition duration-100 p-5 relative border-black
+              hover:bg-gray-200">
+    <div class="text-disabled">
       <%= dates %>
     </div>
-    <div class="flex justify-between">
+    <div class="font-bold mt-3">
       <%= name %>
     </div>
-    <div class="text-sm">
+    <div class="text-sm mt-2">
+      <%= description %>
     </div>
-    <div class="tag-container">
+    <div class="flex mt-5">
       <% for tag in tags do %>
-        <div class="tag">
-          <%= tag %>
-        </div>
+        <%= render "project/tag", name: tag %>
       <% end %>
     </div>
   </div>

@@ -27,9 +27,9 @@
     <%= javascript_importmap_tags %>
     <script src="https://kit.fontawesome.com/1e1c4bc5a2.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="bg-[url(mainbgtexture.jpg)]">
     <%= render "project/mobile_topbar" %>
-    <div class="ml-[5vw] mr-[5vw] xl:ml-0 block xl:flex xl:justify-center">
+    <div class="ml-[5vw] mr-[5vw] xl:ml-0 xl:mr-0 block xl:flex xl:justify-center">
       <%= yield %>
     </div>
   </body>
