@@ -1,36 +1,47 @@
 <div class="<%= !current_page?('/') ? 'hidden' : '' %>
    xl:mt-0 xl:block xl:pb-5 xl:sticky xl:top-0 xl:max-h-screen 
    xl:mr-[7%]">
-  <div class="mt-[5vh]">
-    <p>Hey, I'm </p>
-    <%= link_to "/" do %>
-      <h1 class="pt-5">Qiuyu Huang</h1>
-    <% end %>
-    <p class="mb-5">Software Engineering Student</p>
-    <div class="mt-10">
-      <%= image_tag("sherma.png", width: 150) %>
-    </div>
-    <div class="mb-10 mt-10 text-gray-700">
-      I like building things from the ground up. <br>
-      <br>
-      github: <a target="_blank" href="https://github.com/redacted24">@redacted24</a><br>
-      email: <a target="_blank" href="mailto:huangq4@outlook.com">huangq4@outlook.com</a><br>
-      photo: <a target="_blank" href="https://www.instagram.com/qiuyu__photo/">@qiuyu__photo</a>
-    </div>
-    <div class="mt-5 mb-5 flex">
-      <a href="https://www.linkedin.com/in/qiuyuhuang/" target="_blank"><i class="left-0 text-4xl fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/redacted24" target="_blank"><i class="text-4xl fa-brands fa-square-github"></i></a>
-    </div>
-  </div>
-  <div class="hidden xl:block">
-    <%= link_to "feed" do %>
-      <p>Feed</p>
-    <% end %>
-    <%= link_to "project" do %>
-      <p>Projects</p>
-    <% end %>
-    <%= link_to "photography" do %>
-      <p>Photography</p>
-    <% end %>
-  </div>
+   <div class="mt-[5vh]">
+     <p>Hey, I'm </p>
+     <%= link_to "/" do %>
+       <h1 class="pt-5">Qiuyu Huang</h1>
+     <% end %>
+     <p class="mb-5">Software Engineering Student</p>
+     <div class="mt-10">
+       <%= image_tag("sherma.png", width: 150) %>
+     </div>
+     <div class="mb-10 mt-10 text-gray-700">
+       I like building things from the ground up. <br>
+       <br>
+       github: <a target="_blank" href="https://github.com/redacted24">@redacted24</a><br>
+       email: <a target="_blank" href="mailto:huangq4@outlook.com">huangq4@outlook.com</a><br>
+       photo: <a target="_blank" href="https://www.instagram.com/qiuyu__photo/">@qiuyu__photo</a>
+     </div>
+     <div class="mt-5 mb-5 flex">
+       <a href="https://www.linkedin.com/in/qiuyuhuang/" target="_blank"><i class="left-0 text-4xl fa-brands fa-linkedin"></i></a>
+       <a href="https://github.com/redacted24" target="_blank"><i class="text-4xl fa-brands fa-square-github"></i></a>
+     </div>
+   </div>
+   <div class="hidden xl:block">
+     <div>
+       <%= link_to "/" do %>
+         <p>Home</p>
+       <% end %>
+     </div>
+     <div>
+       <%= link_to "feed" do %>
+         <p>Feed</p>
+       <% end %>
+     </div>
+     <div class="text-disabled pointer-events-none">
+       <%= link_to "project" do %>
+         <p>Projects</p>
+       <% end %>
+     </div>
+     <div class="text-disabled pointer-events-none">
+       <%= link_to "photography" do %>
+         <p>Photography</p>
+       <% end %>
+     </div>
+   </div>
 </div>

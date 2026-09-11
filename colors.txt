@@ -1,6 +1,6 @@
 LIGHT MODE
 main accent
-disabled
+text-gray-400:      disabled
 green confirm
 yellow medium
 red error
