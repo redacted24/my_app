@@ -1,6 +1,8 @@
 <%= render "sidebar" %>
 <div class="xl:w-[40%] mt-[5vh]">
-  <h2 class="mt-0 pt-0 mb-5 font-bold text-2xl">ABOUT ME</h2>
+  <h2 class="font-baskerville mt-0 pt-0 mb-5 font-bold text-2xl">
+    ABOUT ME
+  </h2>
   <div>
     <p>
     Just a kid trying to learn every day.<br><br>
@@ -11,25 +13,27 @@
     </p>
     <br>
     <p>
-    Checkout my arch dotfiles: <a target="_blank" href="https://github.com/redacted24/dotfiles">redacted24/dotfiles</a>
+    Checkout my arch dotfiles: <a target="_blank" 
+                                  href="https://github.com/redacted24/dotfiles" 
+                                  class="font-typewriter bg-amber-200">redacted24/dotfiles</a>
     </p>
     <br>
   </div>
   <div>
-    <h2 class="font-bold text-2xl mt-5 mb-5">EXPERIENCE</h2>
+    <h2 class="font-baskerville font-bold text-2xl mt-5 mb-5">EXPERIENCE</h2>
     <%= 
       render "experience", 
         dates: "July - October 2025",
         name: "Software Developer Intern - CSBQ",
         url: "https://csbq.ca",
-        description: "Cleaned legacy data and developed a procedure to mitigate 
-        future users’ entry errors. Created a data processing tool reducing 
-        overall time spent by more than 200%, and optimized queries and server logic to reduce page loading times by 40%.",
+        description: "Created an interal Ruby on Rails app for processing financial data. 
+      Developed a simple internal CRM platform for employees. Resolved 15+ 
+      front-end tickets. Engineered a process to correct 20 000+ rows of erroneous data, and adapted it to mitigate future errors.",
         tags: ["Python", "Java", "Frontend Development"]
       %>
   </div>
   <div class="mb-10 mt-10">
-    <h2 class="font-bold text-2xl mb-5">PROJECTS</h2>
+    <h2 class="font-baskerville font-bold text-2xl mb-5">PROJECTS</h2>
     <div class="flex flex-col xl:flex-row xl:flex-wrap gap-y-5 xl:justify-between">
       <% for project in @projects.where(featured: 1).order(date: :desc) %>
         <%= 
@@ -39,6 +43,6 @@
       <% end %>
     </div>
   </div>
-  <a href="/project" class="font-bold">See all projects<i class="fa-solid fa-arrow-right"></i></a>
+  <a href="/project" class="font-bold">See all projects &nbsp<i class="fa-solid fa-arrow-right"></i></a>
   <%= render "footer" %>
 </div>

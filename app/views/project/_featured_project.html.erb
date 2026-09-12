@@ -1,16 +1,16 @@
 <%# locals: (project:)%>
 <a href="<%= "/project/" + project.url_string %>" class=" flex w-full xl:w-[48.5%]">
-  <div class="border border-solid transition duration-200 p-5 relative
-    hover:bg-gray-200">
+  <div class="border-2 border-solid transition duration-200 p-5 relative
+    bg-amber-200/50 hover:bg-amber-200">
     <div class="flex justify-between flex-wrap gap-3 font-bold mb-5">
       <%= project.name %>
       <% if project.opensource %>
-        <div class="flex items-center text-xs pl-2 pr-2 bg-green-200 border border-solid 
+        <div class="flex items-center text-xs pl-2 pr-2 bg-green-200 border-2 border-solid 
         border-green-600 font-bold text-green-700">
           open source
         </div>
       <% else %>
-        <div class="flex items-center text-xs pl-2 pr-2 bg-yellow-200 border border-solid 
+        <div class="flex items-center text-xs pl-2 pr-2 bg-yellow-200 border-2 border-solid 
         border-yellow-600 font-bold text-yellow-700">
           closed source
         </div>
@@ -24,7 +24,7 @@
     <div class="exp-description mt-3 mb-5">
       <%= project.description %>
     </div>
-    <div class="flex flex-wrap mt-3">
+    <div class="flex flex-wrap mt-3 gap-y-2">
       <% for tag in project.tags do %>
         <div>
           <%= render "tag", name: tag%>

@@ -23,15 +23,11 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    comments: "This project is my first ever \"real\" project, and I enjoyed coding it with my friend during CEGEP.",
-    active: 0,
-    unreleased: 0,
     description: "An interactive website to learn how to play poker, and play against different poker playstyles. Developed as part of the Capstone project at Marianopolis College.",
-    in_development: 0,
+    long_description: "",
     featured: 1,
     date: Time.new(2024, 03, 01),
     opensource: true,
-
     preview_image: "poker_playground_preview.png"
 )
 project.save
@@ -45,10 +41,6 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    comments: "",
-    active: 1,
-    unreleased: 0,
-    in_development: 1,
     description: "Developed a Windows desktop app that decrypts locally stored databases of a popular messaging service and
 monitors user chats for potentially sensitive topics.",
     long_description: "There exists a version of the messaging service that stores the user messages locally, in an encrypted SQLite3 database.
@@ -58,7 +50,6 @@ monitors user chats for potentially sensitive topics.",
     featured: 1,
     date: Time.new(2025, 07, 07),
     opensource: false,
-
     preview_image: "",
 )
 project.save
@@ -73,12 +64,10 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    comments: "This project was done during McHacks, McGill University's hackathon. It was the most fun I've had coding in a hackathon!",
-    active: 0,
-    unreleased: 0,
-    in_development: 0,
-    description: "Integrated computer vision through MediaPipe to enable players to control and shoot spaceships with hand
-movements.",
+
+    description: "Developed and deployed an online multiplayer web browser game for a hackathon in under 24 hours.",
+    long_description: "Integrated computer vision through OpenCV and
+    MediaPipe to enable players to control and shoot each other's spaceships with simple hand movements.",
     featured: 0,
     date: Time.new(2024, 01, 01),
     opensource: true,
@@ -98,11 +87,8 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    comments: "This project was done at one of my first ever hackathons. Although we did not win anything, it was a great learning opportunity!",
-    active: 0,
-    unreleased: 0,
-    in_development: 0,
     description: "Designed a solution for a hackathon problem involving reservation schedule optimization for an auto repair shop.",
+    long_description: "",
     featured: 0,
     date: Time.new(2024, 01, 02),
     opensource: true,
@@ -121,15 +107,11 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    comments: "My first portfolio app ever!",
-    active: 1,
-    unreleased: 0,
-    in_development: 0,
     description: "Designed, created and deployed a personal portfolio website.",
+    long_description: "It's what you're seeing now!",
     featured: 0,
     date: Time.new(2025, 11, 04),
     opensource: true,
-
     preview_image: "portfoliov1.png",
     extra_images: "",
 )
@@ -146,12 +128,9 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    comments: "",
-    active: 1,
-    unreleased: 0,
-    in_development: 0,
     description: "This project was developed in the context of ECSE 211 - Design Principles and Methods.
     The goal is to create a delivery robot capable of delivering packages to different areas based on given criteria.",
+    long_description: "",
     featured: 1,
     date: Time.new(2025, 11, 04),
     opensource: true,
@@ -170,12 +149,9 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    comments: "Although the game is far from perfect, it was very fun to work on it.",
-    active: 1,
-    unreleased: 0,
-    in_development: 0,
-    description: "A small vampire survivor-esque game made during McGameJam 2026. 
+    description: "A small vampire survivor-esque game made during McGameJam 2026.
     Fight your way through levels while keeping your hunger in check.",
+    long_description: "",
     featured: 1,
     date: Time.new(2026, 02, 10),
     opensource: true,
@@ -194,11 +170,8 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    comments: "A very small project, done as an introduction to graphics programming",
-    active: 1,
-    unreleased: 0,
-    in_development: 0,
     description: "A simple random walk built with Simple MediaDirect Layer 2. Choose the number of walks to generate, and visualize it all with nice colors.",
+    long_description: "",
     featured: 1,
     date: Time.new(2025, 12, 10),
     opensource: true,

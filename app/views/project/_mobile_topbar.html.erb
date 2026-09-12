@@ -1,25 +1,34 @@
-<div class="top-0 left-0 sticky h-10 w-full border-b-neutral-900 
-     bg-white z-10
-     border-b border-solid flex justify-evenly items-center
-     xl:hidden">
-  <div>
-    <%= link_to "/" do %>
-      Home
-    <% end %>
-  </div>
-  <div>
-    <%= link_to "project" do %>
-      Projects
-    <% end %>
-  </div>
-  <div class="text-gray-400 pointer-events-none">
-    <%= link_to "feed" do %>
-      Feed
-    <% end %>
-  </div>
-  <div class="text-gray-400 pointer-events-none">
-    <%= link_to "photography" do %>
-      Photography
-    <% end %>
+<div class="bg-mist-100 top-0 left-0 sticky h-10 w-full border-b-neutral-900 
+     z-10 border-b border-solid bg-[url(strip.jpg)]
+     xl:hidden font-typewriter">
+  <div class="flex items-center justify-evenly h-full">
+    <div>
+       <% if current_page?("/")%>
+         <mark class="bg-amber-200">Home</mark>
+       <% else %>
+         <%= link_to "/" do %>
+           <p class="hover:underline">Home</p>
+         <% end %>
+       <% end %>
+    </div>
+    <div>
+       <% if current_page?("/project")%>
+         <mark class="bg-amber-200">Project</mark>
+       <% else %>
+         <%= link_to "/project" do %>
+           <p class="hover:underline">Project</p>
+         <% end %>
+       <% end %>
+    </div>
+    <div class="text-disabled pointer-events-none">
+      <%= link_to "feed" do %>
+        Feed
+      <% end %>
+    </div>
+    <div class="text-disabled pointer-events-none">
+      <%= link_to "photography" do %>
+        Photography
+      <% end %>
+    </div>
   </div>
 </div>

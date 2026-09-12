@@ -1,49 +1,51 @@
 <%= render "sidebar" %>
 <div class="xl:w-[40%] mt-[5vh]">
-  <div class="flex justify-between">
-    <h2 class="p-0 mb-5 text-2xl font-bold"><%= @project.name %></h2>
-    <%= link_to :back do %>
-      <i class="fa-solid fa-arrow-left"></i><span>Back</span>
+  <div class="flex justify-between items-center mb-10">
+    <h2 class="p-0 text-2xl xl:text-4xl font-bold font-baskerville"><%= @project.name %></h2>
+    <div class="hidden xl:block">
+      <%= link_to :back do %>
+        <i class="fa-solid fa-arrow-left"></i><span class="text-xl font-typewriter">&nbspBack</span>
+      <% end %>
+    </div>
+  </div>
+  <div class="flex flex-wrap gap-y-4 items-center justify-between mb-10">
+    <div class="flex flex-wrap h-full items-center">
+      <% for tag in @project.tags %>
+        <%= render "tag", name: tag %>
+      <% end %>
+    </div>
+    <% if @project.github_link != "" %>
+      <a href="<%= @project.github_link %>" target="_blank" class="text-gray-700">
+        <mark class="bg-amber-200 font-typewriter">
+          <%= @project.github_link.split("/",4)[3] %>
+        </mark>
+      </a>
+    <% else %>
+      <div>
+        <mark class="bg-amber-200 font-typewriter">Private repository.</mark>
+      </div>
     <% end %>
   </div>
-  <% if @project.github_link != "" %>
-    <a href="<%= @project.github_link %>" target="_blank" class="text-gray-700">github</a>
-  <% end %>
-  <br>
-  <br>
-  <%= @project.description %>
-  <div class="flex flex-wrap mt-10 mb-10">
-    <% for tag in @project.tags %>
-      <%= render "tag", name: tag %>
-    <% end %>
+  <div>
+    <%= @project.description.html_safe %>
   </div>
-  <% if !@project.active %>
-    <%= render "project/infocards/card_inactive" %>
-  <% end %>
-  <% if @project.in_development %>
-    <%= render "project/infocards/card_development" %>
-  <% end %>
-  <% if @project.unreleased %>
-    <%= render "project/infocards/card_unreleased" %>
-  <% end %>
-  <% if @project.long_description != nil %>
-    <%= render "project/infocards/card_about", content: @project.long_description %>
-  <% end %>
+  <br>
+  <div>
+    <%= @project.long_description.html_safe %>
+  </div>
+  <div class="mb-5"></div>
+  <br>
   <% if @project.preview_image != "" and @project.extra_images != nil %>
-    <%= render "project/infocards/card_overview_image", project: @project %>
+    <div class="border-2 border-solid">
+      <%= image_tag(@project.preview_image) %>
+    </div>
   <% end %>
   <% if @project.extra_images != "" and @project.extra_images != nil %>
     <% for imagelink in @project.extra_images.split(',',-1) %>
-      <%= render "project/infocards/card_more_images", imagelink: imagelink %>
+      <div class="mt-5 mb-5 border-2 border-solid">
+        <%= image_tag(imagelink) %>
+      </div>
     <% end %>
-  <% end %>
-  <% if @project.github_link != "" %>
-    <%= render 'project/infocards/card_links', content: @project.github_link %>
-  <% else %>
-    <%= render 'project/infocards/card_info', content: "This repository is private." %>
-  <% end %>
-  <% if @project.comments != "" %>
-    <%= render "project/infocards/card_comments", content: @project.comments %>
   <% end %>
   <%= render "footer" %>
 </div>

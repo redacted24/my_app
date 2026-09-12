@@ -1,17 +1,22 @@
 <div class="<%= !current_page?('/') ? 'hidden' : '' %>
-   xl:mt-0 xl:block xl:pb-5 xl:sticky xl:top-0 xl:max-h-screen 
-   xl:mr-[7%]">
-   <div class="mt-[5vh]">
+   xl:mt-0 xl:block xl:pb-10 xl:sticky xl:top-0 xl:h-[50%] xl:bg-amber-50/50
+   xl:pl-10 xl:pr-10
+   xl:border-solid xl:border-l-2 xl:border-b-2 xl:border-r-2
+   xl:mr-[6%]">
+   <div class="mt-[5vh] font-baskerville">
      <p>Hey, I'm </p>
      <%= link_to "/" do %>
-       <h1 class="font-sans font-bold pt-5 text-4xl mb-3">Qiuyu Huang</h1>
+       <h1 class="font-baskerville font-bold pt-5 text-4xl mb-3">
+         Qiuyu Huang
+       </h1>
      <% end %>
-     <p class="mb-5">Software Engineering Student</p>
+     <p class="mb-5 font-baskerville">Software Engineering Student</p>
      <div class="mt-10">
        <%= image_tag("sherma.png", width: 150) %>
      </div>
-     <div class="mb-10 mt-10 text-gray-700">
-       I like building things from the ground up. <br>
+     <div class="font-baskerville mb-10 mt-10">
+       <span class="font-typewriter bg-amber-200">Until death, all defeat is psychological.</span>
+       <br>
        <br>
        github: <a target="_blank" href="https://github.com/redacted24">@redacted24</a><br>
        email: <a target="_blank" href="mailto:huangq4@outlook.com">huangq4@outlook.com</a><br>
@@ -22,20 +27,23 @@
        <a href="https://github.com/redacted24" target="_blank"><i class="text-4xl fa-brands fa-square-github"></i></a>
      </div>
    </div>
-   <div class="hidden xl:block">
-     <div>
-       <%= link_to "/" do %>
-         <p>Home</p>
+   <div class="text-xl font-typewriter hidden xl:block">
+     <div class="mb-3 w-fit">
+       <% if current_page?("/")%>
+         <mark class="bg-amber-200">Home</mark>
+       <% else %>
+         <%= link_to "/" do %>
+           <p class="hover:underline">Home</p>
+         <% end %>
        <% end %>
      </div>
-     <div>
-       <%= link_to "project" do %>
-         <p>Projects</p>
-       <% end %>
-     </div>
-     <div class="text-disabled pointer-events-none">
-       <%= link_to "feed" do %>
-         <p>Feed</p>
+     <div class="mb-3 w-fit">
+       <% if current_page?("/project")%>
+         <mark class="bg-amber-200">Project</mark>
+       <% else %>
+         <%= link_to "/project" do %>
+           <p class="hover:underline">Project</p>
+         <% end %>
        <% end %>
      </div>
      <div class="text-disabled pointer-events-none">

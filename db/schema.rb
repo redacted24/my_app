@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_09_10_204615) do
+ActiveRecord::Schema[8.0].define(version: 2026_09_12_034316) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -61,13 +61,9 @@ ActiveRecord::Schema[8.0].define(version: 2026_09_10_204615) do
     t.string "devpost_link"
     t.string "website_link"
     t.string "custom_link"
-    t.string "comments"
-    t.boolean "active"
-    t.boolean "unreleased"
     t.string "description"
     t.boolean "featured", default: false
     t.date "date"
-    t.boolean "in_development", default: false
     t.text "long_description"
     t.string "preview_image"
     t.string "extra_images"
