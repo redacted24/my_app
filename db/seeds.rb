@@ -14,6 +14,50 @@
 Project.delete_all
 ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
+# Online Commerce Platform
+project = Project.new(
+    name: "Fashion Store",
+    url_string: "fashion_store",
+    tags: [ "React", "Spring", "TypeScript" ],
+    github_link: "https://github.com/McGill-ECSE321-W26/ecse321-project-18",
+    devpost_link: "",
+    website_link: "",
+    custom_link: "",
+    description: "An online platform for a local fashion store, where customers can order and get their clothes delivered, while managers can control item stock and pricings.",
+    long_description: "
+    <div>
+      This group project, associated with ECSE 321 (Introduction to
+      Software Engineering) at McGill University,
+      consists of developing an online platform for a local fashion
+      store that allows for ordering and delivering clothes.
+    </div>
+    <br>
+    <ul class=\"list-disc\">
+      <li>
+        Supervised and defined the implementation of unit, integration and persistence
+        testing across all endpoints using
+        <mark>JUnit 5</mark>
+        and Mockito, leading to a near 100% method
+        and instruction coverage.
+      </li>
+      <li>
+        Constructed the backend for the website using the <mark>Spring</mark> framework, respecting the <mark>MVC</mark> architecture.
+      </li>
+      <li>
+        Automated a CI/CD pipeline with GitHub Actions workflows, ensuring all pushes to main build without fail
+      </li>
+      <li>
+        Finalized the website in a 3-month period in a team of <mark>7</mark> by effective collaboration using Agile methodology
+      </li>
+    </ul>
+    ",
+    featured: 1,
+    date: Time.new(2026, 01, 01),
+    opensource: true,
+    preview_image: ""
+)
+project.save
+
 # Poker playground
 project = Project.new(
     name: "Poker Playground",

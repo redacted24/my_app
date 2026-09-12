@@ -7,3 +7,9 @@
     --font-baskerville: "Baskervville", serif;
     --font-typewriter: "Special Elite", serif;
 }
+
+@layer base {
+    mark {
+        @apply bg-amber-200
+    }
+}
