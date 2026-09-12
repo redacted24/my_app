@@ -32,12 +32,12 @@ project = Project.new(
       store as a team of 7.
     </div>
     <br>
-    <ul class=\"list-disc\">
+    <ul class=\"list-disc list-inside\">
       <li>
         Supervised and defined the implementation of unit, integration and persistence
         testing across all endpoints using
         <mark>JUnit 5</mark>
-        and Mockito, leading to a near 100% method
+        and Mockito, leading to a near <mark>100%</mark> method
         and instruction coverage.
       </li>
       <li>

@@ -1,5 +1,5 @@
-<div class="bg-mist-100 top-0 left-0 sticky h-10 w-full border-b-neutral-900 
-     z-10 border-b border-solid bg-[url(strip.jpg)]
+<div class="bottom-0 left-0 fixed h-10 w-full border-b-neutral-900 
+     z-10 border-t-2 border-solid bg-[url(strip.jpg)]
      xl:hidden font-typewriter">
   <div class="flex items-center justify-evenly h-full">
     <div>
@@ -13,10 +13,10 @@
     </div>
     <div>
        <% if current_page?("/project")%>
-         <mark class="bg-amber-200">Project</mark>
+         <mark class="bg-amber-200">Projects</mark>
        <% else %>
          <%= link_to "/project" do %>
-           <p class="hover:underline">Project</p>
+           <p class="hover:underline">Projects</p>
          <% end %>
        <% end %>
     </div>
