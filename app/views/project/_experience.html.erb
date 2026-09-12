@@ -12,7 +12,7 @@
     <div class="text-sm mt-2">
       <%= description %>
     </div>
-    <div class="flex mt-5">
+    <div class="flex flex-wrap gap-y-2 mt-5">
       <% for tag in tags do %>
         <%= render "project/tag", name: tag %>
       <% end %>

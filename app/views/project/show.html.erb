@@ -2,9 +2,9 @@
 <div class="xl:w-[40%] mt-[5vh]">
   <div class="flex justify-between items-center mb-10">
     <h2 class="p-0 text-2xl xl:text-4xl font-bold font-baskerville"><%= @project.name %></h2>
-    <div class="hidden xl:block">
-      <%= link_to :back do %>
-        <i class="fa-solid fa-arrow-left"></i><span class="text-xl font-typewriter">&nbspBack</span>
+    <div class="ml-4">
+      <%= link_to "/project" do %>
+        <i class="fa-solid fa-arrow-left"></i><span class="text-xl font-typewriter">&nbspProjects</span>
       <% end %>
     </div>
   </div>
