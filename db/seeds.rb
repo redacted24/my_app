@@ -173,7 +173,7 @@ project = Project.new(
     website_link: "",
     custom_link: "",
     description: "This project was developed in the context of ECSE 211 - Design Principles and Methods.
-    The goal is to create a delivery robot capable of delivering packages to different areas based on given criteria.",
+    The goal was to create a delivery robot capable of delivering packages to different areas based on given criteria.",
     long_description: "",
     featured: 1,
     date: Time.new(2025, 11, 04),
