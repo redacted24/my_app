@@ -29,7 +29,7 @@ project = Project.new(
       This group project, associated with ECSE 321 (Introduction to
       Software Engineering) at McGill University,
       consists of developing an online platform for a local fashion
-      store that allows for ordering and delivering clothes.
+      store as a team of 7.
     </div>
     <br>
     <ul class=\"list-disc\">
@@ -47,7 +47,7 @@ project = Project.new(
         Automated a CI/CD pipeline with GitHub Actions workflows, ensuring all pushes to main build without fail
       </li>
       <li>
-        Finalized the website in a 3-month period in a team of <mark>7</mark> by effective collaboration using Agile methodology
+        Finalized the website in a 3-month period in a team of <mark>7</mark> by effective collaboration using Agile methodology.
       </li>
     </ul>
     ",
