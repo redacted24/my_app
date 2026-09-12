@@ -14,6 +14,71 @@
 Project.delete_all
 ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
+# Operating System
+project = Project.new(
+    name: "Simple Operating System",
+    url_string: "simple_os",
+    tags: [ "C", "OS" ],
+    github_link: "",
+    devpost_link: "",
+    website_link: "",
+    custom_link: "",
+    description: "An operating system with a demand-paged memory manager supporting simple
+    Shell commands, multi-threading, page faults handling, and process management according to different
+    scheduling policies.",
+    long_description: "
+    <div>
+      This project was done in the context of the ECSE 427 - Operating Systems course
+      at McGill University.
+    </div>
+    <br>
+    <div>
+      Here are a few more details about what was done and
+      what is supported:
+    </div>
+    <br>
+    <ul class=\"list-disc list-inside\">
+      <li>
+        Accurate LRU policy for demand paging
+      </li>
+      <li>
+        FCFS, SJF, RR and AGING scheduling policies
+      </li>
+      <li>
+        Background process execution
+      </li>
+      <li>
+        Multithreaded process execution
+      </li>
+    </ul>
+    ",
+    featured: 1,
+    date: Time.new(2026, 04, 01),
+    opensource: false,
+    preview_image: "",
+    extra_images: ""
+)
+project.save
+
+# ECSE324 game of life
+project = Project.new(
+    name: "Game of Life - ARMv7",
+    url_string: "gameoflife_arm",
+    tags: [ "C", "Assembly", "DE1-SoC" ],
+    github_link: "https://github.com/redacted24/game_of_life_arm7",
+    devpost_link: "",
+    website_link: "",
+    custom_link: "",
+    description: "The classic Game of Life written in ARMv7 on the DE1-SoC development board.",
+    long_description: "",
+    featured: 1,
+    date: Time.new(2025, 10, 01),
+    opensource: true,
+    preview_image: "gol_arm.gif",
+    extra_images: ""
+)
+project.save
+
 # Online Commerce Platform
 project = Project.new(
     name: "Fashion Store",
@@ -91,7 +156,7 @@ monitors user chats for potentially sensitive topics.",
     By finding a key stored in memory and decrypting this database, it is possible to analyze the activity of a user and
     monitor the chat messages.<br><br>
     Made with Java and its JavaFX GUI framework.",
-    featured: 1,
+    featured: 0,
     date: Time.new(2025, 07, 07),
     opensource: false,
     preview_image: "",
@@ -175,7 +240,7 @@ project = Project.new(
     description: "This project was developed in the context of ECSE 211 - Design Principles and Methods.
     The goal was to create a delivery robot capable of delivering packages to different areas based on given criteria.",
     long_description: "",
-    featured: 1,
+    featured: 0,
     date: Time.new(2025, 11, 04),
     opensource: true,
 
@@ -207,7 +272,7 @@ project.save
 
 # Random Walk C
 project = Project.new(
-    name: "Random Walk in C",
+    name: "Random Walk",
     url_string: "randwalk",
     tags: [ "C", "SDL2" ],
     github_link: "https://github.com/redacted24/random_walk",
@@ -219,7 +284,6 @@ project = Project.new(
     featured: 1,
     date: Time.new(2025, 12, 10),
     opensource: true,
-
     preview_image: "randwalk.gif",
     extra_images: ""
 )

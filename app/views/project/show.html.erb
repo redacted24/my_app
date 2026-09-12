@@ -39,9 +39,9 @@
   </div>
 
   <br>
-  <% if @project.preview_image != "" and @project.extra_images != nil %>
-    <div class="border-2 border-solid w-full">
-      <%= image_tag(@project.preview_image) %>
+  <% if @project.preview_image != ""%>
+    <div class="border-2 border-solid">
+      <%= image_tag(@project.preview_image, class: "w-full") %>
     </div>
   <% end %>
   <% if @project.extra_images != "" and @project.extra_images != nil %>
