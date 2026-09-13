@@ -2,6 +2,11 @@
 <div class="xl:w-[40%] mt-7 xl:mt-[5vh]">
   <div class="flex justify-between items-center mb-10 xl:mb-5">
     <h2 class="p-0 text-2xl xl:text-2xl font-bold font-baskerville"><%= @project.name %></h2>
+    <div class="hidden xl:block">
+      <%= link_to "/project" do %>
+        <i class="fa-solid fa-arrow-left"></i><span class="font-typewriter">&nbspProjects</span>
+      <% end %>
+    </div>
   </div>
 
   <div class="flex flex-wrap gap-y-4 items-center justify-between mb-10">
