@@ -45,7 +45,7 @@
     </div>
   <% end %>
   <% if @project.extra_images != "" and @project.extra_images != nil %>
-    <% for imagelink in @project.extra_images.split(',',-1) %>
+    <% for imagelink in @project.extra_images.split(',') %>
       <div class="mt-5 mb-5 border-2 border-solid">
         <%= image_tag(imagelink, class: "w-full") %>
       </div>

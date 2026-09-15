@@ -116,7 +116,7 @@ project = Project.new(
       </li>
     </ul>
     ",
-    featured: 1,
+    featured: 0,
     date: Time.new(2026, 01, 01),
     opensource: true,
     preview_image: ""
@@ -237,15 +237,35 @@ project = Project.new(
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    description: "This project was developed in the context of ECSE 211 - Design Principles and Methods.
-    The goal was to create a delivery robot capable of delivering packages to different areas based on given criteria.",
-    long_description: "",
-    featured: 0,
+    description: "Autonomous delivery robot built for ECSE 211 at McGill University.",
+    long_description: "
+    <div>
+    An autonomous mail delivery robot that
+    can navigate a simulated campus environment, identify delivery zones using
+    color recognition, avoid restricted areas, and return to base after completing
+    all deliveries. The robot is evaluated based on its navigation accuracy,
+    decision logic, and mission efficiency.</div>
+    <br>
+    <ul class=\"list-disc list-inside\">
+      <li>
+        Built a <mark>BrickPi</mark> robot controlled by Python scripts to autonomously deliver items to different locations
+      </li>
+      <li>
+        Designed <mark>10+</mark> iterations of the robot's hardware subsystems while keeping detailed documentation of the progress
+      </li>
+      <li>
+        Obtained a <mark>100%</mark> perfect score on the final challenge, as a team of 7, by designing
+        and executing all hardware and integration tests to ensure that robot behaviour correctly
+        meets requirements
+      </li>
+    </ul>
+    ",
+    featured: 1,
     date: Time.new(2025, 11, 04),
     opensource: true,
 
-    preview_image: "",
-    extra_images: ""
+    preview_image: "projects/cad_model_robot.png",
+    extra_images: "projects/courier_robot_demo.gif,projects/courier_robot_cadmodel.png,projects/courier_robot_pushsystem.png"
 )
 project.save
 
