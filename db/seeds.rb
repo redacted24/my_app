@@ -14,6 +14,33 @@
 Project.delete_all
 ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
+# Minigine
+project = Project.new(
+    name: "Minigine",
+    url_string: "minigine",
+    tags: [ "C++", "OpenGL", "Graphics" ],
+    github_link: "https://github.com/redacted24/minigine",
+    devpost_link: "",
+    website_link: "",
+    custom_link: "",
+    description: "Simple 3D game engine made with OpenGL and C++",
+    long_description: "
+    <div>
+      This project is currently under development.
+    </div>
+    <br>
+    <div>
+      I've wanted to learn graphics programming, how to use OpenGL, and how game engines work, so I am making my own! All is still work in progress. Check out the repository for more info!
+    </div>
+    ",
+    featured: 1,
+    date: Time.new(2026, 10, 01),
+    opensource: true,
+    preview_image: "",
+    extra_images: ""
+)
+project.save
+
 # Operating System
 project = Project.new(
     name: "Simple Operating System",
@@ -52,7 +79,7 @@ project = Project.new(
       </li>
     </ul>
     ",
-    featured: 1,
+    featured: 0,
     date: Time.new(2026, 04, 01),
     opensource: false,
     preview_image: "",
