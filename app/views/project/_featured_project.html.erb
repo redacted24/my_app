@@ -1,11 +1,11 @@
 <%# locals: (project:)%>
 <a href="<%= "/project/" + project.url_string %>" class=" flex w-full xl:w-[48.5%]">
   <div class="border-2 border-solid transition duration-200 p-5 relative
-    bg-amber-200/50 hover:bg-amber-200">
+    bg-amber-200/50 hover:bg-amber-200 w-full">
     <div class="flex justify-between flex-wrap gap-3 font-bold mb-5">
       <%= project.name %>
       <% if project.opensource %>
-        <div class="flex items-center text-xs pl-2 pr-2 bg-green-200 border-2 border-solid 
+        <div class="flex items-center text-xs pl-2 pr-2 bg-green-200 border-2 border-solid
         border-green-600 font-bold text-green-700">
           open source
         </div>
