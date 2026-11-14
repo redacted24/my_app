@@ -17,9 +17,15 @@
       <% end %>
     </div>
     <% if project.preview_image != "" %>
-      <div class="w-full">
-        <%= image_tag(project.preview_image) %>
-      </div>
+      <% if project.preview_image.split(".")[1] == "mp4" %>
+        <div class="w-full">
+          <%= video_tag project.preview_image, loop: true, muted: true, autoplay: true, controls: false %>
+        </div>
+      <% else %>
+        <div class="w-full">
+          <%= image_tag(project.preview_image) %>
+        </div>
+      <% end %>
     <% end %>
     <div class="exp-description mt-3 mb-5">
       <%= project.description %>

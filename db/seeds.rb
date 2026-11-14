@@ -16,17 +16,17 @@ ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
 # Minigine
 project = Project.new(
-    name: "Minigine",
+    name: "Terrain Generation",
     url_string: "minigine",
     tags: [ "C++", "OpenGL", "Graphics" ],
     github_link: "https://github.com/redacted24/minigine",
     devpost_link: "",
     website_link: "",
     custom_link: "",
-    description: "Simple 3D game engine made with OpenGL and C++",
+    description: "A Minecraft chunk generator and renderer, made with OpenGL and C++. Part of my game engine development process.",
     long_description: "
     <div>
-      This project is currently under development.
+      This small project is completed. However, the game engine is still under development.
     </div>
     <br>
     <div>
@@ -36,7 +36,7 @@ project = Project.new(
     featured: 1,
     date: Time.new(2026, 10, 01),
     opensource: true,
-    preview_image: "",
+    preview_image: "miniginedemo.mp4",
     extra_images: ""
 )
 project.save
@@ -101,7 +101,7 @@ project = Project.new(
     featured: 1,
     date: Time.new(2025, 10, 01),
     opensource: true,
-    preview_image: "gol_arm.gif",
+    preview_image: "gol_arm.mp4",
     extra_images: ""
 )
 project.save
@@ -164,7 +164,8 @@ project = Project.new(
     featured: 1,
     date: Time.new(2024, 03, 01),
     opensource: true,
-    preview_image: "poker_playground_preview.png"
+    preview_image: "poker.mp4",
+    extra_images: "poker_playground_preview.png"
 )
 project.save
 
@@ -291,8 +292,8 @@ project = Project.new(
     date: Time.new(2025, 11, 04),
     opensource: true,
 
-    preview_image: "projects/cad_model_robot.png",
-    extra_images: "projects/courier_robot_demo.gif,projects/courier_robot_cadmodel.png,projects/courier_robot_pushsystem.png"
+    preview_image: "courierrobot.mp4",
+    extra_images: "projects/cad_model_robot.png,projects/courier_robot_cadmodel.png,projects/courier_robot_pushsystem.png"
 )
 project.save
 
@@ -312,8 +313,8 @@ project = Project.new(
     date: Time.new(2026, 02, 10),
     opensource: true,
 
-    preview_image: "gamejam26_titlescreen.png",
-    extra_images: "gamejam26_cutscene.png,gamejam26_example.png"
+    preview_image: "gamejam26.mp4",
+    extra_images: "gamejam26_titlescreen.png,gamejam26_cutscene.png,gamejam26_example.png"
 )
 project.save
 
@@ -331,7 +332,7 @@ project = Project.new(
     featured: 1,
     date: Time.new(2025, 12, 10),
     opensource: true,
-    preview_image: "randwalk.gif",
+    preview_image: "randwalk.mp4",
     extra_images: ""
 )
 project.save
