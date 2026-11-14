@@ -19,7 +19,7 @@
     <% if project.preview_image != "" %>
       <% if project.preview_image.split(".")[1] == "mp4" %>
         <div class="w-full">
-          <%= video_tag project.preview_image, loop: true, muted: true, autoplay: true, controls: false %>
+          <%= video_tag project.preview_image, loop: true, muted: true, autoplay: true, controls: false, playsinline: true, preload: "auto" %>
         </div>
       <% else %>
         <div class="w-full">
