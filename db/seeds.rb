@@ -37,7 +37,7 @@ project = Project.new(
     date: Time.new(2026, 10, 01),
     opensource: true,
     preview_image: "miniginedemo.mp4",
-    extra_images: ""
+    extra_images: "miniginedemo.mp4"
 )
 project.save
 

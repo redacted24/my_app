@@ -52,9 +52,15 @@
   <% end %>
   <% if @project.extra_images != "" and @project.extra_images != nil %>
     <% for imagelink in @project.extra_images.split(',') %>
-      <div class="mt-5 mb-5 border-2 border-solid">
-        <%= image_tag(imagelink, class: "w-full") %>
-      </div>
+      <% if imagelink.split(".")[1] == "mp4" %>
+        <div class="border-2 border-solid w-full">
+          <%= video_tag @project.preview_image, loop: true, muted: true, autoplay: true, controls: false, playsinline: true, preload: "auto"%>
+        </div>
+      <% else %>
+        <div class="mt-5 mb-5 border-2 border-solid">
+          <%= image_tag(imagelink, class: "w-full") %>
+        </div>
+      <% end %>
     <% end %>
   <% end %>
   <%= render "footer" %>
